@@ -1,0 +1,29 @@
+# (Mac) Ghostty configuration is located on $HOME/Library/Application\ Support/com.mitchellh.ghostty/config.ghostty
+# (Linux) $HOME/Library/Application\ Support/com.mitchellh.ghostty/config
+
+# Appereance
+background = 0f0f11
+theme = Zenwritten Dark
+mouse-hide-while-typing = true
+background-opacity = 0.75
+background-blur = mac-os-glass-regular
+
+# Window
+language = en
+
+# Notifications
+notify-on-command-finish = unfocused
+notify-on-command-finish-after = 30s
+
+# Behavior
+auto-update = download
+auto-update-channel = stable
+copy-on-select = clipboard
+shell-integration-features = true
+quit-after-last-window-closed = true
+
+# Keybinds
+keybind = ctrl+up = new_split:up
+keybind = ctrl+down = new_split:down
+keybind = ctrl+right = new_split:right
+keybind = ctrl+left = new_split:left

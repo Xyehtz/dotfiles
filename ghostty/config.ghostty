@@ -23,9 +23,9 @@ shell-integration-features = true
 quit-after-last-window-closed = true
 
 # Keybinds
-keybind = alt+up=new_split:up
-keybind = alt+down=new_split:down
-keybind = alt+right=new_split:right
-keybind = alt+left=new_split:left
-keybind = alt+r=reload_config
-keybind = alt+c=close_surface
+keybind = shift+alt+up=new_split:up
+keybind = shift+alt+down=new_split:down
+keybind = shift+alt+right=new_split:right
+keybind = shift+alt+left=new_split:left
+keybind = shift+alt+r=reload_config
+keybind = shift+alt+c=close_surface

@@ -1,5 +1,5 @@
 # (Mac) Ghostty configuration is located on $HOME/Library/Application\ Support/com.mitchellh.ghostty/config.ghostty
-# (Linux) $HOME/Library/Application\ Support/com.mitchellh.ghostty/config
+# (Linux) ~/.config/ghostty/config.ghostty
 
 # Appereance
 background = 0f0f11

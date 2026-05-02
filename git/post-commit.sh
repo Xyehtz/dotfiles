@@ -2,6 +2,7 @@
  
 # This file should always be located on .git/hooks/ and needs executable
 # permissions
+# NOTE: This is a .sh file, but most of the time no extension will be added
  
 # Should this be used on an actual professional project? No, at least not yet
 # 

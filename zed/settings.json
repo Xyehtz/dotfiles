@@ -6,7 +6,16 @@
 // To see all of Zed's default settings without changing your
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
+// 
+// ON LINUX THIS FILE IS SAVED ON ~/.config/zed
 {
+  // Seeing the errors directly on the screen is very necessary so for this reason I enable this
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  
   // Because I'm learning to use helix, I have it enabled, by default it will also enable vim mode
   "helix_mode": true,
   "vim_mode": false,

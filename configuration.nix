@@ -60,14 +60,7 @@
     isNormalUser = true;
     description = "Alejandro Garzon";
     extraGroups = [ "networkmanager" "wheel" "video" "input" ];
-    packages = with pkgs; [
-      kdePackages.kate
-    #  thunderbird
-    ];
   };
-
-  # Install firefox.
-  programs.firefox.enable = true;
 
   # Install Steam and Gamescope
   programs.steam.enable = true;
@@ -85,8 +78,19 @@
     htop
     nvtopPackages.amd
     ghostty
-    mangohud
     ryzenadj
+    librewolf
+    libsForQt5.qtstyleplugin-kvantum
+    plasma-panel-colorizer
+  ];
+
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    kate
+    konsole
+    elisa
+    khelpcenter
+    okular
+    plasma-browser-integration
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [

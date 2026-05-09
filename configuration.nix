@@ -14,16 +14,16 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelParams = [
-    "amdgpu.runpm=0"
-    "processor.max_cstate=1"
-    "pcie_aspm=off"
-    "idle=nomwait"
-    "usbcore.autosuspend=-1"
-    "usbcore.quirks=0b05:19b6:k"
-    "amdgpu.dpm=0"
-    "acpi_backlight=vendor"
-  ];
+  # boot.kernelParams = [
+  #  "amdgpu.runpm=0"
+  #  "processor.max_cstate=1"
+  #  "pcie_aspm=off"
+  #  "idle=nomwait"
+  #  "usbcore.autosuspend=-1"
+  #  "usbcore.quirks=0b05:19b6:k"
+  #  "amdgpu.dpm=0"
+  #  "acpi_backlight=vendor"
+  # ];
   boot.kernelModules = [ "asus-nb-wmi" "amdgpu" ]; 
 
   networking.hostName = "nixos"; # Define your hostname.

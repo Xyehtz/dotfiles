@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   imports =
@@ -51,7 +51,7 @@
 
   services.asusd = {
     enable = true;
-    enableUserService = true;
+    # enableUserService = true;
   };
   services.supergfxd.enable = true;
 
@@ -82,6 +82,10 @@
     librewolf
     libsForQt5.qtstyleplugin-kvantum
     plasma-panel-colorizer
+
+    # Better Blur package from flake
+    inputs.kwin-effects-better-blur-dx.packages.${pkgs.system}.default # For Wayland
+    inputs.kwin-effects-better-blur-dx.packages.${pkgs.system}.x11     # For X11
   ];
 
   environment.plasma6.excludePackages = with pkgs.kdePackages; [

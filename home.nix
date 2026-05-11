@@ -38,6 +38,7 @@
   };
 
   xdg.configFile."zed/settings.json".source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/zed/settings.json";
+  xdg.configFile."ghostty/config.ghostty".source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/ghostty/config.ghostty";
 
   # Add the LSP for Helix
   home.packages = with pkgs; [

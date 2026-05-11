@@ -37,11 +37,7 @@
     ];
   };
 
-
-  # Load the Zed configuration file
-  home.file.".config/zed".source = ./zed;
-
-  # Add the LSP for Helix
+  # Add the LSP
   home.packages = with pkgs; [
     nil
     nixd

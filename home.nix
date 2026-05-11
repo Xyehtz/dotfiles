@@ -1,4 +1,9 @@
-{ config, pkgs, ...}:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   home.username = "alej-garz";
@@ -18,11 +23,18 @@
         select = "underline";
       };
     };
-    languages.language = [{
-      name = "nix";
-      auto-format = true;
-      formatter.command = lib.getExe pkgs.nixfmt-rfc-style;
-    }];
+    languages.language = [
+      {
+        name = "nix";
+        auto-format = false;
+        formatter.command = "${lib.getExe pkgs.nixfmt}";
+      }
+      {
+        name = "rust";
+        auto-format = false;
+        formatter.command = "${lib.getExe pkgs.rustfmt}";
+      }
+    ];
   };
 
   # Add the LSP

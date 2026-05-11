@@ -1,0 +1,91 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+// 
+// ON LINUX THIS FILE IS SAVED ON ~/.config/zed
+{
+  // Seeing the errors directly on the screen is very necessary so for this reason I enable this
+  "diagnostics": {
+    "inline": {
+      "enabled": true
+    }
+  },
+  
+  // Because I'm learning to use helix, I have it enabled, by default it will also enable vim mode
+  "helix_mode": true,
+  "vim_mode": false,
+  "cli_default_open_behavior": "new_window",
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+
+  // I use an Ollama server, both for answering questions based on code and for code predictions
+  // Connection settings 
+  "language_models": {
+    "ollama": {
+      "api_url": "http://100.68.250.22:11434",
+    },
+  },
+
+  // Code predictions
+  "edit_predictions": {
+    "mode": "subtle", // This way Zed won't be displaying the predictions automatically, instead I press alt to show them
+    "ollama": {
+      "api_url": "http://100.68.250.22:11434",
+      "model": "qwen2.5-coder:7b",
+    },
+    "provider": "ollama",
+  },
+
+  // Chat settings
+  "agent": {
+    "default_profile": "ask",
+    "default_model": {
+      "provider": "ollama",
+      "model": "qwen2.5:3b-instruct",
+      "enable_thinking": false
+    },
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "prettier": {
+    "allowed": true,
+  },
+
+  // Editor settings
+  "soft_wrap": "editor_width",
+  "buffer_font_family": "Iosevka Nerd Font Mono",
+  "format_on_save": "on",
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000,
+    },
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+  "icon_theme": "Base Charmed Icons",
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "dark",
+    "light": "Ayu Light",
+    "dark": "Carbonfox - opaque",
+  },
+}

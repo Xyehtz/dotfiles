@@ -20,10 +20,13 @@
 
         home-manager.nixosModules.home-manager
         {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-          home-manager.users.alej-garz = ./home.nix;
-        }
+          home-manager = {
+            useGlobalPkgs = true;
+            useUserPackages = true;
+            users.alej-garz = ./home.nix;
+            backupFileExtension = "backup";
+          };
+       }
       ];
     };
   };

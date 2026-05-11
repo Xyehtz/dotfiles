@@ -37,7 +37,9 @@
     ];
   };
 
-  # Add the LSP
+  xdg.configFile."zed/settings.json".source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/zed/settings.json";
+
+  # Add the LSP for Helix
   home.packages = with pkgs; [
     nil
     nixd

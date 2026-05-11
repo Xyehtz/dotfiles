@@ -41,5 +41,6 @@
   home.packages = with pkgs; [
     nil
     nixd
+    rust-analyser
   ];
 }

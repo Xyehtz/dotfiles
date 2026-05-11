@@ -41,6 +41,7 @@
   home.packages = with pkgs; [
     nil
     nixd
-    rust-analyser
+    rust-analyzer
+    lldb-dap
   ];
 }

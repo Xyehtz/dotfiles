@@ -17,6 +17,7 @@
   programs.helix = {
     enable = true;
     settings = {
+      theme = "rasmus";
       editor.cursor-shape = {
         normal = "block";
         insert = "bar";

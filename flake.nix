@@ -3,6 +3,7 @@
   
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    home-manager.url = "github:nix-community/home-manager";
 
     kwin-effects-better-blur-dx = {
       url = "github:xarblu/kwin-effects-better-blur-dx";
@@ -16,6 +17,13 @@
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
+
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.alej-garz = ./home.nix;
+        }
       ];
     };
   };

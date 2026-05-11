@@ -42,6 +42,6 @@
     nil
     nixd
     rust-analyzer
-    lldb-dap
+    lldb
   ];
 }

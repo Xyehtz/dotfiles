@@ -35,6 +35,29 @@
         auto-format = false;
         formatter.command = "${lib.getExe pkgs.rustfmt}";
       }
+      {
+        name = "astro";
+        auto-format = false;
+        formatter = {
+          command = "bun";
+          args = [
+            "x"
+            "prettier"
+            "--stdin-filepath"
+            "{path}"
+            "--plugin"
+            "prettier-plugin-astro"
+          ];
+        };
+      }
+      {
+        name = "typescript";
+        auto-format = false;
+        formatter = {
+          command = "bun";
+          args = ["format" "--stdin-filepath" "{path}"];
+        };
+      }
     ];
   };
 
@@ -47,5 +70,11 @@
     nixd
     rust-analyzer
     lldb
+
+    # Web development related
+    nodePackages.typescript
+    nodePackages.typescript-language-server
+    nodePackages."@astrojs/language-server"
+    nodePackages.prettier
   ];
 }

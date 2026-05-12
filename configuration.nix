@@ -82,7 +82,6 @@
     librewolf
     libsForQt5.qtstyleplugin-kvantum
     plasma-panel-colorizer
-    rustc
     obsidian
 
     # Better Blur package from flake
@@ -102,6 +101,7 @@
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "steam"
     "steam-unwrapped"
+    "obsidian"
   ];
   
   system.stateVersion = "25.11"; 

@@ -68,13 +68,16 @@
   home.packages = with pkgs; [
     nil
     nixd
-    rust-analyzer
     lldb
+    rustc
+    cargo
+    rust-analyzer
 
     # Web development related
     typescript
     typescript-language-server
     astro-language-server
     prettier
+    bun
   ];
 }

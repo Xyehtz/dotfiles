@@ -74,7 +74,7 @@
     # Web development related
     typescript
     typescript-language-server
-    astrojs/language-server
+    astro-language-server
     prettier
   ];
 }

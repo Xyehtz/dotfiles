@@ -72,9 +72,9 @@
     lldb
 
     # Web development related
-    nodePackages.typescript
-    nodePackages.typescript-language-server
-    nodePackages."@astrojs/language-server"
-    nodePackages.prettier
+    typescript
+    typescript-language-server
+    astrojs/language-server
+    prettier
   ];
 }

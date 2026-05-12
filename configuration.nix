@@ -82,6 +82,8 @@
     librewolf
     libsForQt5.qtstyleplugin-kvantum
     plasma-panel-colorizer
+    rustc
+    obsidian
 
     # Better Blur package from flake
     inputs.kwin-effects-better-blur-dx.packages.${pkgs.system}.default # For Wayland

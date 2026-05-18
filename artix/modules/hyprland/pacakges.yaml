@@ -1,0 +1,13 @@
+packages:
+
+  # Base Hyprland packages
+  - hyprland
+  - hypridle
+  - hyprlock
+  - hyprpaper
+  - hyprpolkitagent
+  - xdg-desktop-portal-hyprland
+
+  # Desktop utilities
+  - mako # Used for notifications
+  - rofi

@@ -1,0 +1,9 @@
+description: Hyprland configuration module
+post_install_hook: ""
+
+conflicts: []
+
+# dotfiles_sync: true
+# dotfiles:
+# - source: hyprland.conf
+#   target: ~/.config/hypr/hyprland.conf

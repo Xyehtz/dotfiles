@@ -1,0 +1,10 @@
+description: "Module to declare the configurations and packages used for development"
+post_install_hook: ./scripts/install-helix-lsps.sh
+
+conflicts: []
+
+# Dotfiles configuration
+dotfiles_sync: true
+dotfiles:
+  - source: ./helix/languages.toml
+    target: ~/.config/helix/languages.toml

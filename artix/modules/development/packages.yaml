@@ -1,0 +1,3 @@
+packages:
+  - yaml-language-server
+  - rust

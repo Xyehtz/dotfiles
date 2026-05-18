@@ -8,3 +8,5 @@ dotfiles_sync: true
 dotfiles:
   - source: ./helix/languages.toml
     target: ~/.config/helix/languages.toml
+  - source: ./helix/config.toml
+    target: ~/.config/helix/config.toml

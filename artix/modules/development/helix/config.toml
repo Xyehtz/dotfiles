@@ -1,0 +1,38 @@
+theme = "rasmus"
+
+[editor]
+mouse = false
+auto-completion = true
+completion-timeout = 10
+completion-trigger-len = 4
+completion-replace = false
+auto-info = true
+text-width = 80
+indent-heuristic = "hybrid"
+end-of-line-diagnostics = "hint"
+
+[editor.lsp]
+auto-signature-help = true
+display-inlay-hints = true
+display-signature-help-docs = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.auto-save]
+after-delay.enable = true
+after-delay.timeout = 5000
+
+[editor.indent-guides]
+render = true
+character = "|"
+
+[editor.soft-wrap]
+enable = true
+wrap-indicator = "↪"
+max-wrap = 25
+
+[editor.inline-diagnostics]
+cursor-line = "error"

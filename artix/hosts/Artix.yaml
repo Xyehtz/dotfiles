@@ -13,6 +13,7 @@ description: G14 dcli configuration
 enabled_modules:
   - hyprland
   - development
+  - cli
 
 # Module processing mode
 # parallel: Collect and install all modules at once (faster, default)

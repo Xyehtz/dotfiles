@@ -1,0 +1,4 @@
+description: "Configurations and software for Command Line work"
+post_install_hook: ""
+
+conflicts: []

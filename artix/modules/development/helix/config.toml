@@ -1,7 +1,7 @@
 theme = "rasmus"
 
 [editor]
-# mouse = false
+mouse = false
 auto-completion = true
 completion-timeout = 10
 completion-trigger-len = 4

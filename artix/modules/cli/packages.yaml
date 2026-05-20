@@ -1,0 +1,10 @@
+packages:
+  - fish           # The shell I personally use
+  - yay            # Tool to download packages and softare from AUR
+  - 7zip           # Compression utility
+  - unzip          # Compression utility
+  - man-db         # Database of man pages
+  - man-pages      # The linux man pages
+  - pacman-contrib # Scripts and tools for systems that use Pacman
+  - alacritty      # Terminal emulator TO BE DELETED after Kitty configuration is complete
+  - kitty          # Terminal Emulator

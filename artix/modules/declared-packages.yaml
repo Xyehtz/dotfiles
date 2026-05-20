@@ -1,9 +1,7 @@
 description: Packages installed manually on the system (auto-synced by dcli)
 packages:
-- 7zip
 - acpid
 - acpid-dinit
-- alacritty
 - alsa-utils
 - amd-ucode
 - archlinux-keyring
@@ -21,9 +19,7 @@ packages:
 - dosfstools
 - efibootmgr
 - elogind-dinit
-- eza
 - feh
-- fish
 - gamescope
 - grub
 - grub-btrfs
@@ -39,8 +35,6 @@ packages:
 - linux-g14-headers
 - linux-headers
 - mako
-- man-db
-- man-pages
 - mtools
 - networkmanager
 - networkmanager-dinit
@@ -55,7 +49,6 @@ packages:
 - openssh
 - openssh-dinit
 - otf-commit-mono-nerd
-- pacman-contrib
 - pipewire
 - pipewire-dinit
 - pipewire-jack
@@ -67,9 +60,7 @@ packages:
 - rog-control-center
 - rsync
 - sof-firmware
-- starship
 - steam
-- stow
 - syslog-ng
 - syslog-ng-dinit
 - thunar
@@ -77,13 +68,10 @@ packages:
 - tumbler
 - ufw
 - ufw-dinit
-- unzip
 - vulkan-radeon
 - wf-recorder
 - wireplumber
 - wireplumber-dinit
-- yay
-- zoxide
 - rofi
 deb_packages: []
 exclude: []

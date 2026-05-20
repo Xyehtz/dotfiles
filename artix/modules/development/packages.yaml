@@ -1,3 +1,8 @@
 packages:
-  - yaml-language-server
-  - rust
+  - yaml-language-server # LSP used by Helix to lint and format YAML/YML files
+  - rust                 # Rust programming language and Cargo
+  - helix                # Text Editor
+  - git                  # Version control
+  - vim                  # Second text editor, specially used to update system files
+  - clang                # C Programming language
+  - dcli-arch-git        # DCLI, the package used to declare all of this

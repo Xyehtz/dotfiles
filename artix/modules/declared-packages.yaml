@@ -14,9 +14,7 @@ packages:
 - brightnessctl
 - btop
 - btrfs-progs
-- clang
 - cryptsetup
-- dcli-arch-git
 - dhcpcd
 - dinit
 - dinit-user-spawn
@@ -27,10 +25,8 @@ packages:
 - feh
 - fish
 - gamescope
-- git
 - grub
 - grub-btrfs
-- helix
 - hyprshot
 - ipset
 - iptables
@@ -82,7 +78,6 @@ packages:
 - ufw
 - ufw-dinit
 - unzip
-- vim
 - vulkan-radeon
 - wf-recorder
 - wireplumber

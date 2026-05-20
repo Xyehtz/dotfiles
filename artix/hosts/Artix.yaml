@@ -22,6 +22,7 @@ module_processing: parallel
 # Host-specific packages
 packages:
   - librewolf
+  - element-desktop
 
 # Exclude packages from base or modules
 exclude: []

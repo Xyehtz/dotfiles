@@ -1,11 +1,15 @@
 # (Mac) Ghostty configuration is located on $HOME/Library/Application\ Support/com.mitchellh.ghostty/config.ghostty
 # (Linux) ~/.config/ghostty/config.ghostty
 
+# Shell used by Ghostty
+# This alone was not enough, had to also add https://fishshell.com/docs/current/#default-shell
+shell-integration = fish
+
 # Appereance
 background = 0f0f11
 theme = Zenwritten Dark
 mouse-hide-while-typing = true
-background-opacity = 0.8
+background-opacity = 0.75
 background-blur = macos-glass-regular
 
 # Window

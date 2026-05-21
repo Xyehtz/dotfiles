@@ -2,3 +2,13 @@ description: "Configurations and software for Command Line work"
 post_install_hook: ""
 
 conflicts: []
+
+dotfiles_sync: true
+dotfiles:
+  # Ghostty Config
+  - source: ../../../ghostty/config.ghostty
+    target: ~/.config/ghostty/config.ghostty
+
+  # Fish Config
+  - source: ../../../fish/config.fish
+    target: ~/.config/fish/config.fish

@@ -6,5 +6,4 @@ packages:
   - man-db         # Database of man pages
   - man-pages      # The linux man pages
   - pacman-contrib # Scripts and tools for systems that use Pacman
-  - alacritty      # Terminal emulator TO BE DELETED after Kitty configuration is complete
-  - kitty          # Terminal Emulator
+  - ghostty          # Terminal Emulator

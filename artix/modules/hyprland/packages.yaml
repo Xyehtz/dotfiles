@@ -5,6 +5,7 @@ packages:
   - hypridle
   - hyprlock
   - hyprpaper
+  - hyprshot
   - hyprpolkitagent
   - xdg-desktop-portal-hyprland
 

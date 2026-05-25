@@ -1,0 +1,4 @@
+description: "Asus tools, software and configurations used for the Asus G14"
+post_install_hook: ""
+
+conflict: []

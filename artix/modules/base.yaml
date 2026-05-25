@@ -9,13 +9,15 @@ packages:
   - base-devel
 
   # Kernel (uncomment the one you use)
-  # - linux              # Standard kernel
-  # - linux-zen          # Zen kernel (optimized for desktop)
-  # - linux-lts          # Long-term support kernel
-  # - linux-hardened     # Security-focused kernel
+  - linux              # Standard kernel
+  - linux-g14          # Kernes optmized for Asus G14
+  - linux-headers
+  - linux-g14-headers
 
   # Firmware (usually needed)
-  # - linux-firmware
+  - linux-firmware
+  - linux-firmware-amdgpu
+  - linux-firmware-mediatek
 
   # Basic tools (uncomment as needed)
   # - git

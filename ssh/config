@@ -1,0 +1,15 @@
+# NOTE: This file has a symlink to ~/.ssh/config
+
+# GitHub account info
+Host github.com
+	HostName github.com
+	User git
+	IdentityFile ~/.ssh/GitHub
+	AddKeysToAgent yes
+
+# GitLab account info
+Host gitlab.com
+	HostName gitlab.com
+	User git
+	IdentityFile ~/.ssh/GitLab
+	AddKeysToAgent yes

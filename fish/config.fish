@@ -14,9 +14,9 @@ if not test -S $SSH_AUTH_SOCK
 end
 
 # Start hyprland after logging in
-if test -z "$WAYLAND_DISPLAY" -a "$XDG_VTNR" = 1
-    exec start-hyprland
-end
+# if test -z "$WAYLAND_DISPLAY" -a "$XDG_VTNR" = 1
+#     exec start-hyprland
+# end
 
 # Remove the greeting message every time fish starts
 set -g fish_greeting

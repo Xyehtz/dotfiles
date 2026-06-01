@@ -87,7 +87,11 @@
  	    "video"
  	    "input"
  	  ];
+ 	  shell = pkgs.fish; # Fish is the default shell
   };
+
+  # Enable Fish and also keep the same shell whe starting Nix Develop
+  programs.fish.enable = true;
 
   programs.steam = {
     enable = true;

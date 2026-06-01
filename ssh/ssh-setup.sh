@@ -21,3 +21,6 @@ ssh-add ~/.ssh/GitLab
 # Test the SSH Keys
 ssh -T git@github.com
 ssh -T git@gitlab.com
+
+# Copy the config file
+cp ./config ~/.ssh/config

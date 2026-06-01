@@ -1,4 +1,4 @@
-# NOTE: This file has a symlink to ~/.ssh/config
+# NOTE: This file is copied to ~/.ssh/config
 
 # GitHub account info
 Host github.com

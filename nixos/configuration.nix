@@ -95,8 +95,6 @@
 
   # Basic packages for the system
   environment.systemPackages = with pkgs; [
-	  helix # Main text editor
-	  git
 	  ghostty
 	  rofi
 	  btop
@@ -112,7 +110,8 @@
     "steam-run"
   ];
 
-  system.stateVersion = "26.05"; # Did you read the comment?
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  system.stateVersion = "26.05"; # Did you read the comment?
 }
 

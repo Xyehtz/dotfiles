@@ -33,3 +33,6 @@ keybind = shift+alt+right=new_split:right
 keybind = shift+alt+left=new_split:left
 keybind = shift+alt+r=reload_config
 keybind = shift+alt+c=close_surface
+
+# Fonts
+font-feature = feat=1

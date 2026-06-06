@@ -1,7 +1,10 @@
 # Common LSP configurations
-# TOML
-# taplo is used for this TOML LSP, but it has to be installed with cargo (post hook created for this)
+
 [[language]]
+
+# TOML
+# In the case of Artix Linux, the LSP is installed with a post hook
+# For NixOS it is installed on the flake of the project
 name = "toml"
 formatter = { command = "taplo", args = ["format", "-"] }
 auto-format = true

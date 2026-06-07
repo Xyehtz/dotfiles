@@ -73,6 +73,14 @@
   };
   services.xserver.videoDrivers = [ "amdgpu" ];
 
+  zramSwap = {
+    enable = true;
+    priority = 100;
+    algorithm = "lz4";
+    memoryPercent = 50;
+    
+  };
+
   # Network
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;

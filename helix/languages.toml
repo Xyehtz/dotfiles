@@ -13,7 +13,7 @@ auto-format = true
 
 # Configuration for Markdown using Marksman and ltex-ls
 name = "markdown"
-language-server = ["marksman", "ltex-ls"]
+language-servers = ["marksman", "ltex-ls"]
 
 # === === === === Configurations === === === ===
 

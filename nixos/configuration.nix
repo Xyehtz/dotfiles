@@ -73,6 +73,7 @@
   };
   services.xserver.videoDrivers = [ "amdgpu" ];
 
+  # RAM Compression
   zramSwap = {
     enable = true;
     priority = 100;
@@ -146,6 +147,7 @@
 	  fastfetch
 	  dunst
 	  ryzenadj
+	  obsidian
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [

@@ -9,6 +9,14 @@ name = "toml"
 formatter = { command = "taplo", args = ["format", "-"] }
 auto-format = true
 
+[[language]]
+
+# Configuration for Markdown using Marksman and ltex-ls
+name = "markdown"
+language-server = ["marksman", "ltex-ls"]
+
+# === === === === Configurations === === === ===
+
 # YAML LSP Configurations
 [language-server.yaml-language-server.config.yaml]
 format = { enable = true }
@@ -17,3 +25,7 @@ validation = true
 [language-server.yaml-language-server.config.yaml.schemas]
 "https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}"
 "https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" = "roles/{tasks,handlers}/*.{yml,yaml}"
+
+# LSP Configurations for Markdown
+[language-server.ltex-ls.config]
+ltex.dictionary = { "en-US" = ["builtin"], "en-GB" = ["builtin"] }

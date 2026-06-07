@@ -9,6 +9,8 @@
     yaml-language-server
     nil
     nixpkgs-fmt
+    ltex-ls
+    marksman
   ];
 
   xdg.configFile."helix" = {

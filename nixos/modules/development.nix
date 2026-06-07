@@ -11,6 +11,8 @@
     nixpkgs-fmt
     ltex-ls
     marksman
+    taplo
+    codebook
   ];
 
   xdg.configFile."helix" = {

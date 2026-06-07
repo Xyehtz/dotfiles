@@ -15,10 +15,7 @@
       ];
 
       shellHook = ''
-        export SHELL=${pkgs.fish}/bin/fish
-        exec ${pkgs.fish}/bin/fish
-
-        cargo install taplo-cli --locked --features lsp
+        exec fish -C "cd ~/Projects/dotfiles"
       '';
     };
   };

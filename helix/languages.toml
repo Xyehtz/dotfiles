@@ -1,5 +1,7 @@
 # Common LSP configurations
 
+# NOTE: On all (or almost all) languages codebook is added for spell check
+
 [[language]]
 
 # TOML
@@ -8,6 +10,7 @@
 name = "toml"
 formatter = { command = "taplo", args = ["format", "-"] }
 auto-format = true
+language-servers = ["codebook"]
 
 [[language]]
 
@@ -29,3 +32,8 @@ validation = true
 # LSP Configurations for Markdown
 [language-server.ltex-ls.config]
 ltex.dictionary = { "en-US" = ["builtin"], "en-GB" = ["builtin"] }
+
+# Configurations for codebook
+[language-server.codebook]
+command = "codebook-lsp"
+args = ["serve"]

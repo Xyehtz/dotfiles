@@ -4,6 +4,11 @@
   home.packages = with pkgs; [
     helix
     git
+
+    # LSPs
+    yaml-language-server
+    nil
+    nixpkgs-fmt
   ];
 
   xdg.configFile."helix" = {

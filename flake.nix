@@ -10,9 +10,6 @@
   in {
     devShells.${system}.default = pkgs.mkShell {
       buildInputs = with pkgs; [
-        yaml-language-server
-        nil
-        nixpkgs-fmt
         rustc
         cargo
       ];

@@ -52,7 +52,6 @@
   services.asusd = {
 	  enable = true;
   };
-  services.supergfxd.enable = true;
 
   # The power profiles daemon needs to be removed/disabled because otherwise
   # the auto-cpufreq service won't work because it will conflict with the power profiles
@@ -60,9 +59,9 @@
   # services.power-profiles-daemon.enable = true;
   
   # A folder for asusd where multiple configurations are saved also needs to be created
-  systemd.tmpfiles.rules = [
-    "d /etc/asusd 0755 root root -"
-  ];
+  # systemd.tmpfiles.rules = [
+  #   "d /etc/asusd 0755 root root -"
+  # ];
 
   # ------------------------------End of Asus G14 Specific-------------------------------
 

@@ -11,6 +11,7 @@ mkdir -p ~/.ssh
 # Setup keys on ~/.ssh
 ssh-keygen -t ed25519 -C "GitHub Key" -f ~/.ssh/GitHub
 ssh-keygen -t ed25519 -C "GitLab key" -f ~/.ssh/GitLab
+ssh-keygen -t ed25519 -C "Codeberg key" -f ~/.ssh/Codeberg
 
 # Set up the keys after they have been created
 eval "$(ssh-agent -s)" # Sart SSH agent
@@ -21,6 +22,7 @@ ssh-add ~/.ssh/GitLab
 # Test the SSH Keys
 ssh -T git@github.com
 ssh -T git@gitlab.com
+ssh -T git@codeberg.org
 
 # Copy the config file
 cp ./config ~/.ssh/config

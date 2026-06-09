@@ -17,6 +17,7 @@
     typescript-language-server   # TypeScript and JavaScript
     tailwindcss-language-server     # Tailwind
     vscode-langservers-extracted # HTML and CSS
+    superhtml                    # HTML
   ];
 
   xdg.configFile."helix" = {

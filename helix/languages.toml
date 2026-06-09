@@ -20,7 +20,13 @@ language-servers = ["marksman", "ltex-ls"]
 # === === === === Languages that also are impacted by the Tailwind LSP === === === ===
 [[language]]
 name = "html"
-language-servers = [{ name = "superhtml", except-features = ["format"] }, "vscode-html-language-server", "tailwindcss-ls"]
+language-servers = [
+  { name = "superhtml", except-features = [
+    "format",
+  ] },
+  "vscode-html-language-server",
+  "tailwindcss-ls",
+]
 auto-format = true
 
 [[language]]
@@ -29,7 +35,12 @@ language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
 
 [[language]]
 name = "php"
-language-servers = ["phpactor", "tailwindcss-ls"]
+language-servers = [
+  "phpactor",
+  "tailwindcss-ls",
+  "superhtml",
+  "vscode-html-server",
+]
 
 
 # === === === === Configurations === === === ===

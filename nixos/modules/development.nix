@@ -6,13 +6,17 @@
     git
 
     # LSPs
-    yaml-language-server
-    nil
-    nixpkgs-fmt
-    ltex-ls
-    marksman
-    taplo
-    codebook
+    yaml-language-server         # Nix
+    nil                          # Nix
+    nixpkgs-fmt                  # Nix formatter
+    ltex-ls                      # Markdown
+    marksman                     # Markdown
+    taplo                        # TOML
+    codebook                     # Spellcheck
+    phpactor                     # PHP
+    typescript-language-server   # TypeScript and JavaScript
+    tailwindcss-language-server     # Tailwind
+    vscode-langservers-extracted # HTML and CSS
   ];
 
   xdg.configFile."helix" = {

@@ -2,21 +2,34 @@
 
 # NOTE: On all (or almost all) languages codebook is added for spell check
 
-[[language]]
-
 # TOML
 # In the case of Artix Linux, the LSP is installed with a post hook
 # For NixOS it is installed on the flake of the project
+[[language]]
 name = "toml"
 formatter = { command = "taplo", args = ["format", "-"] }
 auto-format = true
 language-servers = ["codebook"]
 
-[[language]]
-
 # Configuration for Markdown using Marksman and ltex-ls
+[[language]]
 name = "markdown"
 language-servers = ["marksman", "ltex-ls"]
+
+
+# === === === === Languages that also are impacted by the Tailwind LSP === === === ===
+[[language]]
+name = "html"
+language-servers = ["vscode-html-language-server", "tailwindcss-ls"]
+
+[[language]]
+name = "css"
+language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
+
+[[language]]
+name = "php"
+language-servers = ["phpactor", "tailwindcss-ls"]
+
 
 # === === === === Configurations === === === ===
 
@@ -37,3 +50,8 @@ ltex.dictionary = { "en-US" = ["builtin"], "en-GB" = ["builtin"] }
 [language-server.codebook]
 command = "codebook-lsp"
 args = ["serve"]
+
+
+# === === === === Configuration for languages that also have Tailwind === === === ===
+[language-server.tailwindcss-ls]
+config = { userLanguages = { php = "html", "*.php" = "html" } } # This is done for the blade files on Laravel

@@ -35,12 +35,11 @@ language-servers = ["vscode-css-language-server", "tailwindcss-ls"]
 
 [[language]]
 name = "php"
-language-servers = [
-  "phpactor",
-  "tailwindcss-ls",
-  "superhtml",
-  "vscode-html-server",
-]
+language-servers = ["phpactor"]
+
+[[language]]
+name = "blade"
+language-servers = ["phpactor", "vscode-html-language-server", "tailwindcss-ls"]
 
 
 # === === === === Configurations === === === ===

@@ -16,7 +16,6 @@
     marksman # Markdown
     taplo # TOML
     codebook # Spellcheck
-    phpactor # PHP
     typescript-language-server # TypeScript and JavaScript
     tailwindcss-language-server # Tailwind
     vscode-langservers-extracted # HTML and CSS
@@ -33,13 +32,17 @@
       nixpkgs-fmt
       package-version-server
       jsonnet-language-server
+      phpactor
     ];
 
     extensions = [
       "nix"
       "nvim-nightfox"
       "charmed-icons"
-      
+      "laravel"
+      "blade"
+      "php"
+      "phpcs"
     ];
 
     userSettings = {
@@ -86,6 +89,22 @@
           model = "<MODEL>";
         };
         provider = "ollama";
+      };
+
+      # Settings required by extensions
+      # Required by the Blade Extension
+      file_types = {
+        Blade = ["*.blade.php"];
+      };
+
+      # Required by the PHPCS Extension
+      languages = {
+        PHP = {
+          language_servers = [
+            "phpcs"
+            "!phpactor"
+          ];
+        };
       };
     };
   };

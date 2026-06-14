@@ -13,10 +13,6 @@
         rustc
         cargo
       ];
-
-      shellHook = ''
-        exec fish -C "cd ~/Projects/dotfiles"
-      '';
     };
   };
 }

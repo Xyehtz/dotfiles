@@ -5,14 +5,13 @@
     git
 
     # Editors
-    zed-editor
     helix
 
     # LSPs
     yaml-language-server # Nix
-    nil # Nix
-    nixd # Nix
-    nixpkgs-fmt # Nix formatter
+    # nil # Nix
+    # nixd # Nix
+    # nixpkgs-fmt # Nix formatter
     ltex-ls # Markdown
     marksman # Markdown
     taplo # TOML
@@ -24,15 +23,75 @@
     superhtml # HTML
   ];
 
-  xdg.configFile."helix" = {
-    source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/helix/";
-    recursive = true;
+  programs.zed-editor = {
+    enable = true;
+
+    # LSPs
+    extraPackages = with pkgs; [
+      nil
+      nixd
+      nixpkgs-fmt
+      package-version-server
+      jsonnet-language-server
+    ];
+
+    extensions = [
+      "nix"
+      "nvim-nightfox"
+      "charmed-icons"
+      
+    ];
+
+    userSettings = {
+      # Diagnostics and other useful information
+      diagnostics.inline.enabled = true;
+      code_lenss = "on";
+
+      # Zed motion type
+      helix_mode = true;
+
+      # Sections organization
+      project_panel.dock = "left";
+      outline_panel.dock = "left";
+      collaboration_panel.dock = "left";
+      git_panel.dock = "left";
+
+      # Themes (Editor and Icons)
+      theme = {
+        mode = "dark";
+        light = "Ayu Light";
+        dark = "Carbonfox - opaque";
+      };
+      icon_theme = "Base Charmed Icons";
+      ui_font_size = 16;
+      buffer_font_size = 15;
+      # TODO - Add Iosevka Nerd Font Mono
+      # buffer_font_family = "Iosevka Nerd Font Mono";
+
+      # Save settings
+      format_on_save = "off";
+      autosave.after_delay.milliseconds = 500;
+
+      # Disable Telemetry
+      telemetry = {
+        diagnostics = false;
+        metrics = false;
+      };
+
+      # AI Settings for Code Completion
+      edit_predictions = {
+        mode = "subtle";
+        ollama = {
+          api_url = "http://<TAILSCALE_IP>:11434";
+          model = "<MODEL>";
+        };
+        provider = "ollama";
+      };
+    };
   };
 
-  # Doing the configurations of Zed this way doens't really work, it is better to put the configurations via Home Manager
-  # TODO - Change this to the actual Zed Home Manager settings
-  xdg.configFile."zed" = {
-    source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/zed";
+  xdg.configFile."helix" = {
+    source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/helix/";
     recursive = true;
   };
 

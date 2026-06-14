@@ -15,13 +15,13 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, mangowm, ... }@inputs: let inherit (nixpkgs) lib;
+  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs: let inherit (nixpkgs) lib;
   in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ./configuration.nix
-        mangowm.nixosModules.mango
+        nixos-hardware.nixosModules.asus-zephyrus-ga402 # TEST THIS
         home-manager.nixosModules.home-manager
         {
           home-manager = {

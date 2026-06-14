@@ -47,6 +47,8 @@
       turbo = "auto";
     };
   };
+
+  services.power-profiles-daemon.enable = false;
   
   # Asus Linux
   services.asusd = {
@@ -72,6 +74,16 @@
   };
   services.xserver.videoDrivers = [ "amdgpu" ];
 
+  # Undervolt Service
+  systemd.services.cpu-undervolt = {
+    description = "CPU Undervolt service";
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = "${pkgs.ryzenadj}/bin/ryzenadj --set-coall=10";
+    };
+  };
+  
   # RAM Compression
   zramSwap = {
     enable = true;
@@ -97,12 +109,11 @@
   #   windowManager.qtile.enable = true;
   # };
 
-  programs.mango.enable = true;
-
-  # ly
-  services.displayManager = {
-    ly.enable = true;
-    defaultSession = "mango";
+  # Because Mango, Hyprland need some configuration and time before they actually work the way I want
+  # I prefer to use KDE so I don't waste time and  Ican get to do what I want
+  services = {
+    desktopManager.plasma6.enable = true;
+    displayManager.plasma-login-manager.enable = true;
   };
 
   # Enable sound.
@@ -123,6 +134,7 @@
  	    "networkmanager"
  	    "wheel"
  	    "video"
+ 	    "corectrl"
  	  ];
  	  shell = pkgs.fish; # Fish is the default shell
   };
@@ -134,20 +146,26 @@
     enable = true;
   };
 
+  # CoreCtrl used for GPU undervolting
+  programs.corectrl = {
+    enable = true;
+    gpuOverclock.enable = true;
+    gpuOverclock.ppfeaturemask = "0xffffffff";
+  };
+
   # Basic packages for the system
   environment.systemPackages = with pkgs; [
 	  ghostty
-	  rofi
 	  btop
 	  librewolf
 	  element-desktop
 	  gamescope
 	  nvtopPackages.amd
 	  fastfetch
-	  dunst
 	  ryzenadj
 	  obsidian
 	  thunderbird
+	  corectrl
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
@@ -163,3 +181,7 @@
   system.stateVersion = "26.05"; # Did you read the comment?
 }
 
+# NOTE
+# This really needs to be cleaned up into multiple modules holy shit
+# ALSO TODO, something to do auto cleanup on the generations because it can get messy
+# TODO - Debloat KDE

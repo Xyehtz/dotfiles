@@ -109,6 +109,7 @@
     };
   };
 
+  # Other configurations
   xdg.configFile."helix" = {
     source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/helix/";
     recursive = true;

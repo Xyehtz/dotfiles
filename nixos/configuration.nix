@@ -153,6 +153,11 @@
     gpuOverclock.ppfeaturemask = "0xffffffff";
   };
 
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+  };
+
   # Basic packages for the system
   environment.systemPackages = with pkgs; [
 	  ghostty

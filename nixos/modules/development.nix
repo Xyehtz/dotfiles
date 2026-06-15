@@ -9,9 +9,6 @@
 
     # LSPs
     yaml-language-server # Nix
-    # nil # Nix
-    # nixd # Nix
-    # nixpkgs-fmt # Nix formatter
     ltex-ls # Markdown
     marksman # Markdown
     taplo # TOML
@@ -43,6 +40,7 @@
       "blade"
       "php"
       "phpcs"
+      "comment"
     ];
 
     userSettings = {
@@ -58,6 +56,7 @@
       outline_panel.dock = "left";
       collaboration_panel.dock = "left";
       git_panel.dock = "left";
+      terminal.dock = "right";
 
       # Themes (Editor and Icons)
       theme = {
@@ -68,8 +67,7 @@
       icon_theme = "Base Charmed Icons";
       ui_font_size = 16;
       buffer_font_size = 15;
-      # TODO - Add Iosevka Nerd Font Mono
-      # buffer_font_family = "Iosevka Nerd Font Mono";
+      buffer_font_family = "Iosevka Nerd Font Mono";
 
       # Save settings
       format_on_save = "off";

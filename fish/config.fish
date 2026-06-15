@@ -26,6 +26,3 @@ cd ~
 
 # Add Cargo bin to PATH
 set -U fish_user_paths /home/alej-garz/.cargo/bin $fish_user_paths
-
-# Integrate direnv
-direnv hook fish | source

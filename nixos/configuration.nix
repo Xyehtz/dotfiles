@@ -15,7 +15,7 @@
 
   # --------------------------------Asus G14 2022 Specific--------------------------------
 
-  # === === === Kernel and AMD GPU Driver settings === === ===
+  # ========Kernel and AMD GPU Driver settings=========
   boot.kernelParams = [
   	#"pcie_aspm=off"
   	# "consoleblank=0"
@@ -30,7 +30,7 @@
   #   options amdgpu runpm=0
   # '';
 
-  # === === === === === === === === === === === === === === ==
+  # =================================================
 
   boot.kernelModules = [ "asus-nb-wmi" "amdgpu" ];
 
@@ -49,7 +49,7 @@
   };
 
   services.power-profiles-daemon.enable = false;
-  
+
   # Asus Linux
   services.asusd = {
 	  enable = true;
@@ -57,9 +57,9 @@
 
   # The power profiles daemon needs to be removed/disabled because otherwise
   # the auto-cpufreq service won't work because it will conflict with the power profiles
-  # 
+  #
   # services.power-profiles-daemon.enable = true;
-  
+
   # A folder for asusd where multiple configurations are saved also needs to be created
   # systemd.tmpfiles.rules = [
   #   "d /etc/asusd 0755 root root -"
@@ -83,14 +83,13 @@
       ExecStart = "${pkgs.ryzenadj}/bin/ryzenadj --set-coall=10";
     };
   };
-  
+
   # RAM Compression
   zramSwap = {
     enable = true;
     priority = 100;
     algorithm = "lz4";
     memoryPercent = 50;
-    
   };
 
   # Network
@@ -171,6 +170,11 @@
 	  obsidian
 	  thunderbird
 	  corectrl
+		mangohud
+  ];
+
+  fonts.packages = with pkgs; [
+    nerd-fonts.iosevka
   ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
@@ -188,5 +192,5 @@
 
 # NOTE
 # This really needs to be cleaned up into multiple modules holy shit
-# ALSO TODO, something to do auto cleanup on the generations because it can get messy
+# TODO - something to do auto cleanup on the generations because it can get messy
 # TODO - Debloat KDE

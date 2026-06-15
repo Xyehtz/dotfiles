@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./modules/development.nix
+    ./modules/development/development.nix
     ./modules/desktopEnv.nix
   ];
 

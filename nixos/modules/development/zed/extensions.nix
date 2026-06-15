@@ -1,0 +1,10 @@
+[
+  "nix"
+  "nvim-nightfox"
+  "charmed-icons"
+  "laravel"
+  "blade"
+  "php"
+  "phpcs"
+  "comment"
+]

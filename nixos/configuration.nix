@@ -174,8 +174,8 @@
   ];
 
   fonts.packages = with pkgs; [
-    nerd-fonts.iosevka
-  ];
+    monaspace
+ ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "steam"

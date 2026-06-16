@@ -7,4 +7,5 @@
   "php"
   "phpcs"
   "comment"
+  "git-firefly"
 ]

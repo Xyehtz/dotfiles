@@ -22,7 +22,7 @@
   icon_theme = "Base Charmed Icons";
   ui_font_size = 16;
   buffer_font_size = 15;
-  buffer_font_family = "Iosevka Nerd Font Mono";
+  buffer_font_family = "Monaspace Neon";
 
   # Save settings
   format_on_save = "off";

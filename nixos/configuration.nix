@@ -157,6 +157,9 @@
     nix-direnv.enable = true;
   };
 
+  # Enable this for unpatched binaries in order to prevent issues. Specially with Zed extensions
+  programs.nix-ld.enable = true;
+
   # Basic packages for the system
   environment.systemPackages = with pkgs; [
 	  ghostty

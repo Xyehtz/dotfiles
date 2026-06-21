@@ -26,3 +26,4 @@ cd ~
 
 # Add Cargo bin to PATH
 set -U fish_user_paths /home/alej-garz/.cargo/bin $fish_user_paths
+set -U fish_user_paths ~/.local/bin $fish_user_paths

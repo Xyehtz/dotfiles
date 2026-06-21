@@ -158,7 +158,12 @@
   };
 
   # Enable this for unpatched binaries in order to prevent issues. Specially with Zed extensions
-  programs.nix-ld.enable = true;
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      stdenv.cc.cc.lib
+    ];
+  };
 
   # Basic packages for the system
   environment.systemPackages = with pkgs; [

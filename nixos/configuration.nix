@@ -179,8 +179,8 @@
 	  thunderbird
 	  corectrl
 		mangohud
-		ngrok
 		steam
+		localtunnel
   ];
 
   fonts.packages = with pkgs; [
@@ -193,7 +193,6 @@
     "steam-original"
     "steam-run"
     "obsidian"
-    "ngrok"
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

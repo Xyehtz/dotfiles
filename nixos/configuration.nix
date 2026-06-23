@@ -181,6 +181,7 @@
 		mangohud
 		steam
 		localtunnel
+		yt-dlp
   ];
 
   fonts.packages = with pkgs; [

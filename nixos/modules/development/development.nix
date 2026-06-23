@@ -21,8 +21,12 @@
     tailwindcss-language-server # Tailwind
     vscode-langservers-extracted # HTML and CSS
     superhtml # HTML
+
+    # I HATE VS Code, but it is the only editor that has the Official Laravel extension
+    vscode-fhs 
   ];
 
+  # TODO: Try to use the zed-editor-fhs version to improve the usage on NixOS
   programs.zed-editor = import ./zed/zedSettings.nix {
     inherit pkgs;
   };

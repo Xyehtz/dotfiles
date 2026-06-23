@@ -194,6 +194,8 @@
     "steam-original"
     "steam-run"
     "obsidian"
+    "code"
+    "vscode"
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

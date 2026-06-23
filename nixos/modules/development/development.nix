@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports = [
@@ -23,6 +23,8 @@
     superhtml # HTML
 
     # I HATE VS Code, but it is the only editor that has the Official Laravel extension
+    # TODO: Implement a configuration similar to Zed and limit the extensions only to Laravel
+    # IMPORTANT: DISABLE ALL TELEMETRY AND AI
     vscode-fhs 
   ];
 

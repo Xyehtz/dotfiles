@@ -50,13 +50,5 @@
     Blade = [ "*.blade.php" ];
   };
 
-  # Required by the PHPCS Extension
-  languages = {
-    PHP = {
-      language_servers = [
-        "phpcs"
-        "!phpactor"
-      ];
-    };
-  };
+  languages = import ./languages.nix;
 }

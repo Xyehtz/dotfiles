@@ -5,6 +5,7 @@
   "laravel"
   "blade"
   "php"
+  "phpmd"
   "phpcs"
   "comment"
   "git-firefly"

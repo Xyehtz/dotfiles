@@ -4,7 +4,8 @@
   code_lenss = "on";
 
   # Zed motion type
-  helix_mode = true;
+  # Currently disabled, may enable it later
+  helix_mode = false;
 
   # Sections organization
   project_panel.dock = "left";

@@ -9,5 +9,6 @@
     package-version-server
     jsonnet-language-server
     phpactor
+    codebook
   ];
 }

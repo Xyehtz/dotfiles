@@ -9,4 +9,5 @@
   "phpcs"
   "comment"
   "git-firefly"
+  "codebook"
 ]

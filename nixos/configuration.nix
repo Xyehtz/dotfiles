@@ -195,7 +195,7 @@
     "steam-run"
     "obsidian"
     "code"
-    "vscode"
+    "phpstorm"
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

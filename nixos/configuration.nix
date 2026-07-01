@@ -125,6 +125,22 @@
 	  alsa.support32Bit = true;
   };
 
+  # Enable Bluetooth
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      General = {
+        Experimental = true; # Show the battery of connected devices
+        FastConnectable = false; # The power consumptions trade-off is not worth it
+      };
+
+      Policy = {
+        AutoEnable = true;
+      };
+    };
+  };
+
   # User account definition
   users.users.alej-garz = {
 	  isNormalUser = true;
@@ -194,8 +210,6 @@
     "steam-original"
     "steam-run"
     "obsidian"
-    "code"
-    "phpstorm"
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

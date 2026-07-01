@@ -21,9 +21,6 @@
     tailwindcss-language-server # Tailwind
     vscode-langservers-extracted # HTML and CSS
     superhtml # HTML
-
-    # TEST: How PHPStorm works in comparison to Zed
-    jetbrains.phpstorm
  ];
 
   # TODO: Try to use the zed-editor-fhs version to improve the usage on NixOS

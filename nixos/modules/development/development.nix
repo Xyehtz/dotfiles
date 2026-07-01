@@ -21,6 +21,9 @@
     tailwindcss-language-server # Tailwind
     vscode-langservers-extracted # HTML and CSS
     superhtml # HTML
+
+    # Coding agents
+    opencode-desktop
  ];
 
   # TODO: Try to use the zed-editor-fhs version to improve the usage on NixOS

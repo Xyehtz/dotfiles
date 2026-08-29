@@ -111,11 +111,11 @@
   # Because Mango, Hyprland need some configuration and time before they actually work the way I want
   # I prefer to use KDE so I don't waste time and  Ican get to do what I want
 
-  # Disabled in order to test kineticwe
-  # services = {
-  #   desktopManager.plasma6.enable = true;
-  #   displayManager.plasma-login-manager.enable = true;
-  # };
+  # KDE Plasma
+  services = {
+    desktopManager.plasma6.enable = true;
+    displayManager.plasma-login-manager.enable = true;
+  };
 
   # Enable sound.
   services.pulseaudio.enable = false;
@@ -226,6 +226,7 @@
     "rpcs3"
   ];
 
+  # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   system.stateVersion = "26.05"; # Did you read the comment?

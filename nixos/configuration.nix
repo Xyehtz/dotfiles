@@ -110,10 +110,12 @@
 
   # Because Mango, Hyprland need some configuration and time before they actually work the way I want
   # I prefer to use KDE so I don't waste time and  Ican get to do what I want
-  services = {
-    desktopManager.plasma6.enable = true;
-    displayManager.plasma-login-manager.enable = true;
-  };
+
+  # Disabled in order to test kineticwe
+  # services = {
+  #   desktopManager.plasma6.enable = true;
+  #   displayManager.plasma-login-manager.enable = true;
+  # };
 
   # Enable sound.
   services.pulseaudio.enable = false;
@@ -198,6 +200,11 @@
 		steam
 		localtunnel
 		yt-dlp
+		lutris
+		heroic
+		localsend
+		deadlock-mod-manager
+		rpcs3
   ];
 
   fonts.packages = with pkgs; [
@@ -210,6 +217,7 @@
     "steam-original"
     "steam-run"
     "obsidian"
+    "rpcs3"
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

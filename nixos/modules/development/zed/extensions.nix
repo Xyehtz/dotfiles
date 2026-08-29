@@ -10,4 +10,5 @@
   "comment"
   "git-firefly"
   "codebook"
+  "mermaid"
 ]

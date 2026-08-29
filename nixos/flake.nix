@@ -2,15 +2,15 @@
   description = "";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-26.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    mangowm = {
-      url = "github:mangowm/mango";
+    kineticwe = {
+      url = "gitlab:theblackdon/kineticwe";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -23,6 +23,11 @@
         ./configuration.nix
         nixos-hardware.nixosModules.asus-zephyrus-ga402 # TEST THIS
         home-manager.nixosModules.home-manager
+
+        # Kineticwe
+        inputs.kineticwe.nixosModules.default
+        { programs.kineticwe.enable = true; }
+        
         {
           home-manager = {
             useGlobalPkgs = true;

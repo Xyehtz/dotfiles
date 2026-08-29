@@ -201,6 +201,7 @@
 
 		# Matrix clients
 	  element-desktop
+		nheko
 
 		# Notes
 	  obsidian
@@ -224,6 +225,10 @@
     "steam-run"
     "obsidian"
     "rpcs3"
+  ];
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "olm-3.2.16"
   ];
 
   # Enable flakes

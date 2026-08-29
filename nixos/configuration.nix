@@ -4,6 +4,7 @@
   imports =
     [
       ./hardware-configuration.nix
+      ./auto-upgrade.nix
     ];
 
   # Systemd Bootloader
@@ -82,6 +83,12 @@
       Type = "oneshot";
       ExecStart = "${pkgs.ryzenadj}/bin/ryzenadj --set-coall=10";
     };
+  };
+
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 15d";
   };
 
   # RAM Compression

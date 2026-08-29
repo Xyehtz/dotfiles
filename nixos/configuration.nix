@@ -185,26 +185,32 @@
 
   # Basic packages for the system
   environment.systemPackages = with pkgs; [
-	  ghostty
+    # Terminal
+    ghostty
+
+    # Terminal applications
+    nvtopPackages.amd
 	  btop
-	  librewolf
-	  element-desktop
-	  gamescope
-	  nvtopPackages.amd
 	  fastfetch
 	  ryzenadj
-	  obsidian
-	  thunderbird
-	  corectrl
-		mangohud
-		steam
-		localtunnel
 		yt-dlp
-		lutris
-		heroic
+		corectrl
+
+		# Browser
+	  librewolf
+
+		# Matrix clients
+	  element-desktop
+
+		# Notes
+	  obsidian
+
+		# Email Client
+	  thunderbird
+
+		# VPN and File Sharing
 		localsend
-		deadlock-mod-manager
-		rpcs3
+		tailscale
   ];
 
   fonts.packages = with pkgs; [

@@ -4,7 +4,7 @@
   imports = [
     ./modules/development/development.nix
     ./modules/desktopEnv.nix
-    inputs.kineticwe.nixosModules.default
+    ./modules/gaming.nix
   ];
 
   home.username = "alej-garz";

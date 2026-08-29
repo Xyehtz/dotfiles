@@ -10,8 +10,4 @@
   home.username = "alej-garz";
   home.homeDirectory = "/home/alej-garz";
   home.stateVersion = "25.11";
-
-  # Kineticwe
-  nixpkgs.overlays = [ inputs.kineticwe.overlays.default ];
-  programs.kineticwe.enable = true;
 }

@@ -8,15 +8,26 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # DankMaterialShell
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # dgop package for DankMaterialShell
+    dgop = {
+      url = "github:AvengeMedia/dgop";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nixos-hardware, ... }@inputs: let inherit (nixpkgs) lib;
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: let inherit (nixpkgs) lib;
   in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [
         ./configuration.nix
-        nixos-hardware.nixosModules.asus-zephyrus-ga402
         home-manager.nixosModules.home-manager
         
         {

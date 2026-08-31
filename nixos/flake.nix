@@ -36,6 +36,7 @@
             useUserPackages = true;
             users.alej-garz = import ./home.nix;
             backupFileExtension = "backup";
+            extraSpecialArgs = { inherit inputs; };
           };
         }
       ];

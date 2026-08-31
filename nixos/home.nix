@@ -1,11 +1,10 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
     ./modules/development/development.nix
     ./modules/desktopEnv.nix
     ./modules/gaming.nix
-    ./modules/desktopEnv.nix
   ];
 
   # Disable systemd integration to prevent issues with UWSM

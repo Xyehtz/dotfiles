@@ -56,6 +56,9 @@
 	  enable = true;
   };
 
+  # GNOME Keyring - Important in order to maintain access to Element Clients
+  services.gnome.gnome-keyring.enable = true;
+
   # The power profiles daemon needs to be removed/disabled because otherwise
   # the auto-cpufreq service won't work because it will conflict with the power profiles
   #

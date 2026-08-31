@@ -4,6 +4,9 @@
   imports = [
     inputs.dms.homeModules.dank-material-shell
   ];
+
+  # File Manager
+  programs.yazi.enable = true;
   
   programs.dank-material-shell = {
     # Enable DankMaterialShell

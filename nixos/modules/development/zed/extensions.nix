@@ -11,4 +11,5 @@
   "git-firefly"
   "codebook"
   "mermaid"
+  "lua" # For Hyprland configruations
 ]

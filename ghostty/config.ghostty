@@ -36,3 +36,4 @@ keybind = shift+alt+c=close_surface
 
 # Fonts
 font-feature = feat=1
+font-size = 9

@@ -10,5 +10,6 @@
     jsonnet-language-server
     phpactor
     codebook
+    lua-language-server
   ];
 }

@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, config, ... }:
 
 {
   imports = [
@@ -28,4 +28,10 @@
   home.packages = with pkgs; [
     rofi
   ];
+
+  # Sync configs
+  xdg.configFile."hypr/hyprland.lua" = {
+    source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/hyprland/hyprland.lua";
+    recursive = true;
+  };
 }

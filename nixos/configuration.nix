@@ -107,21 +107,17 @@
   time.timeZone = "America/Toronto";
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  # I3
-  # services.xserver = {
-  #   enable = true;
-  #   autoRepeatDelay = 200;
-  #   autoRepeatInterval = 35;
-  #   windowManager.qtile.enable = true;
+  # KDE Plasma - Disabled as Hyprland is being tested
+  # services = {
+  #   desktopManager.plasma6.enable = true;
+  #   displayManager.plasma-login-manager.enable = true;
   # };
 
-  # Because Mango, Hyprland need some configuration and time before they actually work the way I want
-  # I prefer to use KDE so I don't waste time and  Ican get to do what I want
-
-  # KDE Plasma
-  services = {
-    desktopManager.plasma6.enable = true;
-    displayManager.plasma-login-manager.enable = true;
+  # Hyprland
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+    xwayland.enable = true;
   };
 
   # Enable sound.

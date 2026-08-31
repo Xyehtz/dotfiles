@@ -39,8 +39,8 @@ hl.monitor({
 ---------------------
 
 -- Set programs that you use
-local terminal    = "kitty"
-local fileManager = "dolphin"
+local terminal    = "ghostty"
+local fileManager = "ghostty -e yazi"
 local menu        = "rofi -show drun"
 
 
@@ -54,7 +54,7 @@ local menu        = "rofi -show drun"
 -- Or execute your favorite apps at launch like this:
 
 hl.on("hyprland.start", function()
-  -- Start DMS on Hyprland startup  
+  -- Start DMS on Hyprland startup
   hl.exec_cmd("dms run")
 end)
 

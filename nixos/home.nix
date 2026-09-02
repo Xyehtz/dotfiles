@@ -3,7 +3,7 @@
 {
   imports = [
     ./modules/development/development.nix
-    ./modules/desktop/desktopEnv.nix
+    ./modules/desktopEnv.nix
     ./modules/gaming.nix
   ];
 

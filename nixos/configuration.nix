@@ -116,12 +116,13 @@
   #   displayManager.plasma-login-manager.enable = true;
   # };
 
-  # Hyprland
+  # Hyprland and waybar
   programs.hyprland = {
     enable = true;
     withUWSM = true;
     xwayland.enable = true;
   };
+  programs.waybar.enable = true;
 
   # Enable sound.
   services.pulseaudio.enable = false;

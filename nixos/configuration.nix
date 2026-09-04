@@ -116,13 +116,8 @@
   #   displayManager.plasma-login-manager.enable = true;
   # };
 
-  # Hyprland and waybar
-  programs.hyprland = {
-    enable = true;
-    withUWSM = true;
-    xwayland.enable = true;
-  };
-  programs.waybar.enable = true;
+  # Niri
+  programs.niri.enable = true;
 
   # Enable sound.
   services.pulseaudio.enable = false;
@@ -194,6 +189,7 @@
   environment.systemPackages = with pkgs; [
     # Terminal
     ghostty
+    alacritty
 
     # Terminal applications
     nvtopPackages.amd
@@ -219,6 +215,11 @@
 		# VPN and File Sharing
 		localsend
 		tailscale
+
+		# Other
+		fuzzel
+		swaybg
+		xwayland-satellite
   ];
 
   fonts.packages = with pkgs; [

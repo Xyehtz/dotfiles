@@ -14,12 +14,8 @@
   ];
 
   # Sync configs
-  xdg.configFile."hypr/hyprland.lua" = {
-    source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/hyprland/hyprland.lua";
-    recursive = true;
-  };
-  xdg.configFile."waybar" = {
-    source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/waybar";
+  xdg.configFile."niri/config.kdl" = {
+    source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/niri/config.kdl";
     recursive = true;
   };
 }

@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ inputs, lib, pkgs, ... }:
 
 {
   imports =
@@ -220,6 +220,9 @@
 		fuzzel
 		swaybg
 		xwayland-satellite
+
+		# Noctalia
+		inputs.noctalia.packages.${system}.default
   ];
 
   fonts.packages = with pkgs; [

@@ -8,6 +8,7 @@
 // https://niri-wm.github.io/niri/Configuration:-Input
 
 prefer-no-csd // Get rid of window decorations, at least for those that support it.
+spawn-at-startup "noctalia"
 
 input {
     keyboard {

@@ -9,16 +9,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # DankMaterialShell
-    dms = {
-      url = "github:AvengeMedia/DankMaterialShell/stable";
+    quickshell = {
+      url = "github:outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # dgop package for DankMaterialShell
-    dgop = {
-      url = "github:AvengeMedia/dgop";
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
       inputs.nixpkgs.follows = "nixpkgs";
+      inputs.quickshell.follows = "quickshell";
     };
   };
 
@@ -26,6 +25,7 @@
   in {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
+      specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
         home-manager.nixosModules.home-manager

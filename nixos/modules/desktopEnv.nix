@@ -2,7 +2,7 @@
 
 {
   imports = [
-    inputs.dms.homeModules.dank-material-shell
+    inputs.noctalia.homeModules.default
   ];
 
   # File Manager
@@ -10,12 +10,20 @@
 
   # Other packcages
   home.packages = with pkgs; [
-    rofi
+
   ];
+
+  programs.noctalia = {
+    enable = true;
+  };
 
   # Sync configs
   xdg.configFile."niri/config.kdl" = {
     source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/niri/config.kdl";
     recursive = true;
+  };
+
+  xdg.configFile."quickshell/noctalia/settings.json" = {
+    source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/noctalia/settings.json";
   };
 }

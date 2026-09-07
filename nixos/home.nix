@@ -5,10 +5,11 @@
     ./modules/development/development.nix
     ./modules/desktopEnv.nix
     ./modules/gaming.nix
-  ];
+    ./modules/nvf-config.nix
 
-  # Disable systemd integration to prevent issues with UWSM
-  wayland.windowManager.hyprland.systemd.enable = false;
+    # NVF
+    inputs.nvf.homeManagerModules.default
+  ];
 
   home.username = "alej-garz";
   home.homeDirectory = "/home/alej-garz";

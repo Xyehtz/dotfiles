@@ -19,15 +19,21 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.quickshell.follows = "quickshell";
     };
+
+    nvf = {
+      url = "github:notashelf/nvf";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: let inherit (nixpkgs) lib;
+  outputs = { self, nixpkgs, home-manager, nvf, ... }@inputs: let inherit (nixpkgs) lib;
   in {
+   
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = { inherit inputs; };
       modules = [
         ./configuration.nix
+        nvf.nixosModules.default
         home-manager.nixosModules.home-manager
         
         {

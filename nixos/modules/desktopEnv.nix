@@ -92,6 +92,17 @@
           };
         };
       };
+
+      location = {
+        auto_locate = false;
+        address = "Toronto, ON";
+      };
+
+      nightlight = {
+        enabled = true;
+        temperature_day = 6000;
+        temperature_night = 5000;
+      };
     };
   };
 

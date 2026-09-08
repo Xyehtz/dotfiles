@@ -32,8 +32,6 @@
   #   options amdgpu runpm=0
   # '';
 
-  # =================================================
-
   boot.kernelModules = [ "asus-nb-wmi" "amdgpu" ];
 
   # Set the governor for the laptop when in battery and charger
@@ -204,7 +202,6 @@
 
 		# Matrix clients
 	  element-desktop
-		nheko
 
 		# Notes
 	  obsidian
@@ -242,10 +239,6 @@
     "rpcs3"
   ];
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "olm-3.2.16"
-  ];
-
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -254,5 +247,3 @@
 
 # NOTE
 # This really needs to be cleaned up into multiple modules holy shit
-# TODO - something to do auto cleanup on the generations because it can get messy
-# TODO - Debloat KDE

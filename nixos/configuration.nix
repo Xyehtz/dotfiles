@@ -5,6 +5,7 @@
     [
       ./hardware-configuration.nix
       ./auto-upgrade.nix
+      ./modules/netbird-client.nix
     ];
 
   # Systemd Bootloader
@@ -220,6 +221,10 @@
 		fuzzel
 		swaybg
 		xwayland-satellite
+    nix-search-cli
+
+    # SSH
+    sshfs
 
 		# Noctalia
 		inputs.noctalia.packages.${system}.default

@@ -103,6 +103,30 @@
         temperature_day = 6000;
         temperature_night = 5000;
       };
+
+      notifications = {
+        enable_daemon = true;
+        show_app_name = true;
+        show_actions = false;
+        position = "bottom_left";
+        layer = "top";
+        scale = 1.0;
+        background_opacity = 0.9;
+        offset_x = 20;
+        offset_y = 8;
+        monitors = [];
+        collapse_on_dismiss = true;
+        keep_dismissed_in_history = false;
+        max_visible = 0;
+        history_retention_hours = 3;
+      };
+
+      weather = {
+        enabled = true;
+        refresh_minutes = 60;
+        unit = "metric";
+        effects = true;
+      };
     };
   };
 

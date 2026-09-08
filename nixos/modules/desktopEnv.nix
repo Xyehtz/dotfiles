@@ -10,7 +10,7 @@
 
   # Other packcages
   home.packages = with pkgs; [
-
+    upower # Noctalia uses UPower for battery status
   ];
 
   programs.noctalia = {
@@ -168,7 +168,7 @@
           # Widgets
           start = [ "cpu" "temp" "ram" "audio_visualizer" ];
           center = [ "workspaces" ];
-          end = [ "notifications" "network" "bluetooth" "volume" "clock" "session" ];
+          end = [ "notifications" "network" "bluetooth" "volume" "clock" "control-center" "session" ];
         };
       };
 

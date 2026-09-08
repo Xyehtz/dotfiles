@@ -44,7 +44,7 @@
         };
 
         # Default wallpaper
-        default.path = "/home/alej-garz/Wallpapers/Nier-Blade.png";
+        default.path = "/home/alej-garz/Wallpapers/Rei.png";
       };
 
       audio = {
@@ -72,7 +72,7 @@
 
       idle = {
         behavior_order = [ "lock" "screen-off" ];
-        pre_action_fade_seconds = 5.0;
+        pre_action_fade_seconds = 2.5;
 
         behavior = {
           lock = {

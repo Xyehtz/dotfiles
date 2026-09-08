@@ -109,12 +109,6 @@
   time.timeZone = "America/Toronto";
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  # KDE Plasma - Disabled as Hyprland is being tested
-  # services = {
-  #   desktopManager.plasma6.enable = true;
-  #   displayManager.plasma-login-manager.enable = true;
-  # };
-
   # Niri
   programs.niri.enable = true;
 

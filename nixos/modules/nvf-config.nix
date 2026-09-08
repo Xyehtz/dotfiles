@@ -59,6 +59,16 @@
         };
       };
 
+      vim.git = {
+        gitsigns = {
+          enable = true;
+
+          setupOpts = {
+            current_line_blame = true;
+          };
+        };
+      };
+
       # ==== Plugis Section ====
       vim.extraPlugins = {
 

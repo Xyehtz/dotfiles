@@ -76,13 +76,13 @@
 
         behavior = {
           lock = {
-            timeout = 30;
+            timeout = 300; # 5 mins before lock
             action = "lock";
             enabled = true;
           };
 
           screen-off = {
-            timeout = 60;
+            timeout = 60; # 1 min to screen off after lock
             action = "screen_off";
             enabled = true;
           };

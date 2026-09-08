@@ -224,11 +224,10 @@
 
 		# Noctalia
 		inputs.noctalia.packages.${system}.default
-  ];
 
-  fonts.packages = with pkgs; [
-    monaspace
- ];
+    # School/College
+    onlyoffice-desktopeditors
+  ];
 
   nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
     "steam"

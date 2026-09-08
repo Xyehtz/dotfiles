@@ -127,6 +127,107 @@
         unit = "metric";
         effects = true;
       };
+
+      bar = {
+        order = "main";
+
+        default = {
+
+          # Position and hide settings
+          position = "top";
+          enabled = true;
+          auto_hide = false; 
+          smart_auto_hide = false;
+          layer = "top";
+
+          # Bar style settings
+          thickness = 34;
+          background_opacity = 0.9;
+          border = "outline";
+          shadow = true;
+          contact_shadow = true;
+          radius_top_left = 0;
+          radius_top_right = 0;
+          radius_bottom_left = 12;
+          radius_bottom_right = 12;
+          margin_ends = 0;
+          margin_edge = 0;
+          padding = 14;
+          widget_spacing = 6;
+          hover_highlight = true;
+          scale = 1.0;
+          font_scale = 1.0;
+          font_weight = 500;
+
+          # Capsule settings (for widget groups)
+          capsule = true;
+          capsule_fill = "surface_variant";
+          capsule_thickness = 0.75;
+          capsule_opacity = 1.0;
+        
+          # Widgets
+          start = [ "cpu" "temp" "ram" "audio_visualizer" ];
+          center = [ "workspaces" ];
+          end = [ "notifications" "network" "bluetooth" "volume" "clock" "session" ];
+        };
+      };
+
+      widget = {
+
+        # Start - Sysmon
+        cpu = {
+          type = "sysmon";
+          stat = "cpu_usage";
+        };
+
+        temp = {
+          type = "sysmon";
+          stat = "cpu_temp";
+        };
+
+        ram = {
+          type = "sysmon";
+          stat = "ram_used";
+        };
+
+        # Start - Audio visualizer
+        audio-vis = {
+          type = "audio_visualizer";
+          width = 128;
+          mirrored = false;
+          bands = 40;
+          show_when_idle = false;
+        };
+
+        # Center - Workspaces
+        workspaces = {
+          style = "regular";
+          show_labels = true;
+          show_icons = false;
+          labels_only_when_occupied = true;
+          hide_when_empty = true;
+          pill_scale = 1.0;
+          active_pill_size = 2.2;
+          inactive_pill_size = 1.0;
+        };
+
+        # End - Network
+        network = {
+          show_label = false;
+          vpn_status = "replace";
+        };
+
+        # End - Volume
+        volume = {
+          device = "output";
+          mute_color = "error";
+        };
+
+        # End - Clock
+        clock = {
+          format = "{:%-I:%M %p} • {:%a, %b %d}";
+        };
+      };
     };
   };
 

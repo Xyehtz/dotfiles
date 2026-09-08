@@ -236,8 +236,4 @@
     source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/niri/config.kdl";
     recursive = true;
   };
-
-  # xdg.configFile."quickshell/noctalia/settings.json" = {
-  #   source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/noctalia/settings.json";
-  # };
 }

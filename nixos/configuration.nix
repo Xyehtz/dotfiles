@@ -189,8 +189,7 @@
   # Basic packages for the system
   environment.systemPackages = with pkgs; [
     # Terminal
-    ghostty
-    alacritty
+    kitty
 
     # Terminal applications
     nvtopPackages.amd

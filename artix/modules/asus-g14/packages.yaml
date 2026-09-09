@@ -1,6 +1,0 @@
-packages:
-  - asusctl
-  - rog-control-center
-  - power-profiles-daemon
-  - power-profiles-daemon-dinit
-  - brightnessctl

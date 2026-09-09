@@ -8,9 +8,6 @@
   home.packages = with pkgs; [
     git
 
-    # Editors
-    helix
-
     # LSPs
     yaml-language-server # Nix
     ltex-ls # Markdown

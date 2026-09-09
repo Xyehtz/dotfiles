@@ -168,7 +168,7 @@
           # Widgets
           start = [ "cpu" "temp" "ram" "audio_visualizer" ];
           center = [ "workspaces" ];
-          end = [ "notifications" "network" "bluetooth" "volume" "clock" "control-center" "session" ];
+          end = [ "tray" "notifications" "network" "bluetooth" "volume" "clock" "control-center" "session" ];
         };
       };
 

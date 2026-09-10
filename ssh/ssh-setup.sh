@@ -12,17 +12,21 @@ mkdir -p ~/.ssh
 ssh-keygen -t ed25519 -C "GitHub Key" -f ~/.ssh/GitHub
 ssh-keygen -t ed25519 -C "GitLab key" -f ~/.ssh/GitLab
 ssh-keygen -t ed25519 -C "Codeberg key" -f ~/.ssh/Codeberg
+ssh-keygen -t ed25519 -C "GitHub Sheridan key" -f ~/.ssh/Sheridan-Github
 
 # Set up the keys after they have been created
 eval "$(ssh-agent -s)" # Sart SSH agent
 
 ssh-add ~/.ssh/GitHub
 ssh-add ~/.ssh/GitLab
+ssh-add ~/.ssh/Codeberg
+ssh-add ~/.ssh/Sheridan-Github
 
 # Test the SSH Keys
-ssh -T git@github.com
+ssh -T git@personal-github.com
 ssh -T git@gitlab.com
 ssh -T git@codeberg.org
+ssh -T git@sheridan-github.com
 
 # Copy the config file
 cp ./config ~/.ssh/config

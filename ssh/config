@@ -1,7 +1,7 @@
 # NOTE: This file is copied to ~/.ssh/config
 
 # GitHub account info
-Host github.com
+Host personal-github.com
 	HostName github.com
 	User git
 	IdentityFile ~/.ssh/GitHub
@@ -14,8 +14,16 @@ Host gitlab.com
 	IdentityFile ~/.ssh/GitLab
 	AddKeysToAgent yes
 
+# Codeberg account information - Personal only
 Host codeberg.org
 	HostName codeberg.org
 	User git
 	IdentityFile ~/.ssh/Codeberg
 	AddKeysToAgent yes
+
+# School account for GitHub
+Host sheridan-github.com
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/Sheridan-Github
+  AddkeysToAgent yes

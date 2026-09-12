@@ -1,4 +1,9 @@
-{ pkgs, inputs, config, ... }:
+{
+  pkgs,
+  inputs,
+  config,
+  ...
+}:
 
 {
   imports = [
@@ -38,7 +43,7 @@
         # Automated wallpaper change
         automation = {
           enabled = true;
-          interval_seconds = 1800; # Change every 30 mins 
+          interval_seconds = 1800; # Change every 30 mins
           order = "random";
           recursive = true;
         };
@@ -71,7 +76,10 @@
       };
 
       idle = {
-        behavior_order = [ "lock" "screen-off" ];
+        behavior_order = [
+          "lock"
+          "screen-off"
+        ];
         pre_action_fade_seconds = 2.5;
 
         behavior = {
@@ -82,7 +90,7 @@
           };
 
           screen-off = {
-            timeout = 60; # 1 min to screen off after lock
+            timeout = 360; # 1 min to screen off after lock
             action = "screen_off";
             enabled = true;
           };
@@ -114,7 +122,7 @@
         background_opacity = 0.9;
         offset_x = 20;
         offset_y = 8;
-        monitors = [];
+        monitors = [ ];
         collapse_on_dismiss = true;
         keep_dismissed_in_history = false;
         max_visible = 0;
@@ -136,7 +144,7 @@
           # Position and hide settings
           position = "top";
           enabled = true;
-          auto_hide = false; 
+          auto_hide = false;
           smart_auto_hide = false;
           layer = "top";
 
@@ -164,11 +172,25 @@
           capsule_fill = "surface_variant";
           capsule_thickness = 0.75;
           capsule_opacity = 1.0;
-        
+
           # Widgets
-          start = [ "cpu" "temp" "ram" "audio_visualizer" ];
+          start = [
+            "cpu"
+            "temp"
+            "ram"
+            "audio_visualizer"
+          ];
           center = [ "workspaces" ];
-          end = [ "tray" "notifications" "network" "bluetooth" "volume" "clock" "control-center" "session" ];
+          end = [
+            "tray"
+            "notifications"
+            "network"
+            "bluetooth"
+            "volume"
+            "clock"
+            "control-center"
+            "session"
+          ];
         };
       };
 

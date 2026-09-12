@@ -38,6 +38,7 @@
       };
       
       vim.lsp.enable = true;
+      vim.lsp.presets.harper.enable = true;
 
       vim.autocomplete.nvim-cmp = {
         enable = true;
@@ -69,10 +70,10 @@
         };
       };
 
-      # ==== Plugis Section ====
+      # ==== Plugins Section ====
       vim.extraPlugins = {
 
-        # auto-save.nvim
+        # Autosave for Neovim
         auto-save = {
           package = pkgs.vimPlugins.auto-save-nvim;
           setup = ''require('auto-save').setup {

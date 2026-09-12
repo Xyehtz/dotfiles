@@ -1,7 +1,5 @@
 {
-  config,
   pkgs,
-  lib,
   ...
 }:
 
@@ -9,19 +7,22 @@
   programs.nvf = {
     enable = true;
 
-    settings = {
-      vim.statusline.lualine.enable = true;
-      vim.telescope.enable = true;
-      vim.filetree.neo-tree.enable = true;
-      vim.autopairs.nvim-autopairs.enable = true;
+    settings.vim = {
+      statusline.lualine.enable = true;
+      telescope.enable = true;
+      filetree.neo-tree.enable = true;
+      autopairs.nvim-autopairs.enable = true;
 
-      vim.theme = {
+      # Leader key
+      globals.mapleader = " ";
+
+      theme = {
         enable = true;
         name = "mellow";
         style = "moon";
       };
 
-      vim.languages = {
+      languages = {
         enableTreesitter = true;
 
         nix = {
@@ -35,7 +36,7 @@
 
           format = {
             enable = true;
-            type = [ "nixfmt" ];
+            type = [ "alejandra" ];
           };
         };
 
@@ -47,25 +48,25 @@
         };
       };
 
-      vim.options = {
+      options = {
         tabstop = 2;
         shiftwidth = 2;
         expandtab = true;
       };
 
-      vim.lsp = {
+      lsp = {
         enable = true;
         presets.harper.enable = true;
         formatOnSave = true;
       };
 
-      vim.autocomplete.nvim-cmp = {
+      autocomplete.nvim-cmp = {
         enable = true;
         sourcePlugins = [ ];
       };
-      vim.snippets.luasnip.enable = true;
+      snippets.luasnip.enable = true;
 
-      vim.diagnostics = {
+      diagnostics = {
         enable = true;
 
         config = {
@@ -79,7 +80,7 @@
         };
       };
 
-      vim.git = {
+      git = {
         gitsigns = {
           enable = true;
 
@@ -90,7 +91,16 @@
       };
 
       # ==== Plugins Section ====
-      vim.extraPlugins = {
+
+      # Better comments
+      notes.todo-comments.enable = true;
+      tabline.nvimBufferline = {
+        enable = true;
+        mappings.closeCurrent = "<leader>bd";
+      };
+      binds.whichKey.enable = true;
+
+      extraPlugins = {
 
         # Autosave for Neovim
         auto-save = {

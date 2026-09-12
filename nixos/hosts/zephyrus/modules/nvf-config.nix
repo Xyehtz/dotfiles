@@ -38,6 +38,13 @@
             type = [ "nixfmt" ];
           };
         };
+
+        python = {
+          enable = true;
+          dap.enable = true;
+          lsp.enable = true;
+          format.enable = true;
+        };
       };
 
       vim.options = {

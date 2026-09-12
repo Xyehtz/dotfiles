@@ -1,12 +1,16 @@
-{ inputs, lib, pkgs, ... }:
+{
+  inputs,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
-  imports =
-    [
-      ./hardware-configuration.nix
-      ./auto-upgrade.nix
-      ./modules/netbird-client.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+    ./auto-upgrade.nix
+    ./modules/netbird-client.nix
+  ];
 
   # Systemd Bootloader
   boot.loader.systemd-boot.enable = true;
@@ -19,20 +23,23 @@
 
   # ========Kernel and AMD GPU Driver settings=========
   boot.kernelParams = [
-  	#"pcie_aspm=off"
-  	# "consoleblank=0"
-	  # "amdgpu.dcdebugmask=0x10"
-	  # "amdgpu.sg_display=0"
-	  # "acpi_backlight=vendor"
-	  # "usbcore.quirks=0b05:19b6:k"
-	  "amd_pstate=active"
+    #"pcie_aspm=off"
+    # "consoleblank=0"
+    # "amdgpu.dcdebugmask=0x10"
+    # "amdgpu.sg_display=0"
+    # "acpi_backlight=vendor"
+    # "usbcore.quirks=0b05:19b6:k"
+    "amd_pstate=active"
   ];
 
   # boot.extraModprobeConfig = ''
   #   options amdgpu runpm=0
   # '';
 
-  boot.kernelModules = [ "asus-nb-wmi" "amdgpu" ];
+  boot.kernelModules = [
+    "asus-nb-wmi"
+    "amdgpu"
+  ];
 
   # Set the governor for the laptop when in battery and charger
   services.auto-cpufreq.enable = true;
@@ -52,7 +59,7 @@
 
   # Asus Linux
   services.asusd = {
-	  enable = true;
+    enable = true;
   };
 
   # GNOME Keyring - Important in order to maintain access to Element Clients
@@ -72,8 +79,8 @@
 
   hardware.enableRedistributableFirmware = true;
   hardware.graphics = {
-  	enable = true;
-  	enable32Bit = true;
+    enable = true;
+    enable32Bit = true;
   };
   services.xserver.videoDrivers = [ "amdgpu" ];
 
@@ -116,10 +123,10 @@
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
-	  enable = true;
-  	pulse.enable = true;
-	  alsa.enable = true;
-	  alsa.support32Bit = true;
+    enable = true;
+    pulse.enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
   };
 
   # Enable Bluetooth
@@ -140,15 +147,15 @@
 
   # User account definition
   users.users.alej-garz = {
-	  isNormalUser = true;
-	  description = "Alej-Garz";
- 	  extraGroups = [
- 	    "networkmanager"
- 	    "wheel"
- 	    "video"
- 	    "corectrl"
- 	  ];
- 	  shell = pkgs.fish; # Fish is the default shell
+    isNormalUser = true;
+    description = "Alej-Garz";
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "video"
+      "corectrl"
+    ];
+    shell = pkgs.fish; # Fish is the default shell
   };
 
   # Enable Fish and also keep the same shell whe starting Nix Develop
@@ -178,6 +185,10 @@
     ];
   };
 
+  environment.sessionVariables = {
+    MOZ_ENABLE_WAYLAND = "1";
+  };
+
   # Basic packages for the system
   environment.systemPackages = with pkgs; [
     # Terminal
@@ -185,55 +196,60 @@
 
     # Terminal applications
     nvtopPackages.amd
-	  btop
-	  fastfetch
-	  ryzenadj
-		yt-dlp
-		corectrl
+    btop
+    fastfetch
+    ryzenadj
+    yt-dlp
+    corectrl
 
-		# Browser
-	  librewolf
+    # Browser
+    librewolf
 
-		# Matrix clients
-	  element-desktop
+    # Matrix clients
+    element-desktop
 
-		# Notes
-	  obsidian
+    # Notes
+    obsidian
 
-		# Email Client
-	  thunderbird
+    # Email Client
+    thunderbird
 
-		# VPN and File Sharing
-		localsend
-		tailscale
+    # VPN and File Sharing
+    localsend
+    tailscale
 
-		# Other
-		fuzzel
-		swaybg
-		xwayland-satellite
+    # Other
+    fuzzel
+    swaybg
+    xwayland-satellite
     nix-search-cli
 
     # SSH
     sshfs
 
-		# Noctalia
-		inputs.noctalia.packages.${system}.default
+    # Noctalia
+    inputs.noctalia.packages.${system}.default
 
     # School/College
     onlyoffice-desktopeditors
   ];
 
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "steam"
-    "steam-unwrapped"
-    "steam-original"
-    "steam-run"
-    "obsidian"
-    "rpcs3"
-  ];
+  nixpkgs.config.allowUnfreePredicate =
+    pkg:
+    builtins.elem (lib.getName pkg) [
+      "steam"
+      "steam-unwrapped"
+      "steam-original"
+      "steam-run"
+      "obsidian"
+      "rpcs3"
+    ];
 
   # Enable flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   system.stateVersion = "26.05"; # Did you read the comment?
 }

@@ -216,7 +216,6 @@
 
     # VPN and File Sharing
     localsend
-    tailscale
 
     # Other
     fuzzel
@@ -230,8 +229,12 @@
     # Noctalia
     inputs.noctalia.packages.${system}.default
 
+    # API Tester
+    bruno
+
     # School/College
     onlyoffice-desktopeditors
+    teams-for-linux
   ];
 
   nixpkgs.config.allowUnfreePredicate =

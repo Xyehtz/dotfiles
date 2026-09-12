@@ -1,9 +1,14 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 {
   programs.nvf = {
     enable = true;
-    
+
     settings = {
       vim.statusline.lualine.enable = true;
       vim.telescope.enable = true;
@@ -21,12 +26,16 @@
 
         nix = {
           enable = true;
-          format.enable = true;
           extraDiagnostics.enable = true;
 
           lsp = {
             enable = true;
             servers = [ "nixd" ]; # Preferred over nil
+          };
+
+          format = {
+            enable = true;
+            type = [ "nixfmt" ];
           };
         };
       };
@@ -36,9 +45,12 @@
         shiftwidth = 2;
         expandtab = true;
       };
-      
-      vim.lsp.enable = true;
-      vim.lsp.presets.harper.enable = true;
+
+      vim.lsp = {
+        enable = true;
+        presets.harper.enable = true;
+        formatOnSave = true;
+      };
 
       vim.autocomplete.nvim-cmp = {
         enable = true;
@@ -76,14 +88,15 @@
         # Autosave for Neovim
         auto-save = {
           package = pkgs.vimPlugins.auto-save-nvim;
-          setup = ''require('auto-save').setup {
-            enabled = true,
-            trigger_events = {
+          setup = ''
+            require('auto-save').setup {
+              enabled = true,
+              trigger_events = {
               immediate_save = { "BufLeave", "FocusLost" },
               defer_save = { "InsertLeave", "TextChanged" },
               cancel_deferred_save = { "InsertEnter" },
-            },
-          }'';
+              },
+            }'';
         };
       };
     };

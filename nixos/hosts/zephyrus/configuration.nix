@@ -13,7 +13,9 @@
     ../general/auto-upgrade.nix
     ../general/garbage-collection.nix
     ../general/ram-compression.nix
+    ../general/sound.nix
     ./services/core-services.nix
+    ./programs.nix
   ];
 
   # ========Kernel and AMD GPU Driver settings=========
@@ -55,19 +57,6 @@
   time.timeZone = "America/Toronto";
   i18n.defaultLocale = "en_CA.UTF-8";
 
-  # Niri
-  programs.niri.enable = true;
-
-  # Enable sound.
-  services.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-  };
-
   # User account definition
   users.users.alej-garz = {
     isNormalUser = true;
@@ -81,86 +70,14 @@
     shell = pkgs.fish; # Fish is the default shell
   };
 
-  # Enable Fish and also keep the same shell whe starting Nix Develop
-  programs.fish.enable = true;
-
-  programs.steam = {
-    enable = true;
-  };
-
-  # CoreCtrl used for GPU undervolting
-  programs.corectrl = {
-    enable = true;
-    gpuOverclock.enable = true;
-    gpuOverclock.ppfeaturemask = "0xffffffff";
-  };
-
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-  };
-
   environment.sessionVariables = {
     MOZ_ENABLE_WAYLAND = "1";
   };
 
-  # Basic packages for the system
   environment.systemPackages = with pkgs; [
-    # Terminal
-    ghostty
-
-    # Terminal applications
-    nvtopPackages.amd
-    btop
-    fastfetch
-    ryzenadj
-    yt-dlp
-    corectrl
-
-    # Browser
-    librewolf
-
-    # Matrix clients
-    element-desktop
-
-    # Notes
-    obsidian
-
-    # Email Client
-    thunderbird
-
-    # VPN and File Sharing
-    localsend
-
-    # Other
-    fuzzel
-    swaybg
-    xwayland-satellite
-    nix-search-cli
-
-    # SSH
-    sshfs
-
     # Noctalia
     inputs.noctalia.packages.${system}.default
-
-    # API Tester
-    bruno
-
-    # School/College
-    onlyoffice-desktopeditors
-    teams-for-linux
   ];
-
-  nixpkgs.config.allowUnfreePredicate = pkg:
-    builtins.elem (lib.getName pkg) [
-      "steam"
-      "steam-unwrapped"
-      "steam-original"
-      "steam-run"
-      "obsidian"
-      "rpcs3"
-    ];
 
   # Enable flakes
   nix.settings.experimental-features = [

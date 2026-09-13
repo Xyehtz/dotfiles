@@ -12,6 +12,7 @@
     ../general/bluetooth.nix
     ../general/auto-upgrade.nix
     ../general/garbage-collection.nix
+    ../general/ram-compression.nix
     ./services/core-services.nix
   ];
 
@@ -44,17 +45,11 @@
     };
   };
 
-  # RAM Compression
-  zramSwap = {
-    enable = true;
-    priority = 100;
-    algorithm = "lz4";
-    memoryPercent = 50;
-  };
-
   # Network
-  networking.hostName = "nixos";
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "nixos";
+    networkmanager.enable = true;
+  };
 
   # Timezone
   time.timeZone = "America/Toronto";

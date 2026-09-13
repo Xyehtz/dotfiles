@@ -3,13 +3,12 @@
   lib,
   pkgs,
   ...
-}:
-
-{
+}: {
   imports = [
     ./hardware-configuration.nix
     ./auto-upgrade.nix
     ./modules/netbird-client.nix
+    ./fonts.nix
   ];
 
   # Systemd Bootloader
@@ -82,12 +81,12 @@
     enable = true;
     enable32Bit = true;
   };
-  services.xserver.videoDrivers = [ "amdgpu" ];
+  services.xserver.videoDrivers = ["amdgpu"];
 
   # Undervolt Service
   systemd.services.cpu-undervolt = {
     description = "CPU Undervolt service";
-    wantedBy = [ "multi-user.target" ];
+    wantedBy = ["multi-user.target"];
     serviceConfig = {
       Type = "oneshot";
       ExecStart = "${pkgs.ryzenadj}/bin/ryzenadj --set-coall=10";
@@ -237,8 +236,7 @@
     teams-for-linux
   ];
 
-  nixpkgs.config.allowUnfreePredicate =
-    pkg:
+  nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [
       "steam"
       "steam-unwrapped"
@@ -256,6 +254,5 @@
 
   system.stateVersion = "26.05"; # Did you read the comment?
 }
-
 # NOTE
 # This really needs to be cleaned up into multiple modules holy shit

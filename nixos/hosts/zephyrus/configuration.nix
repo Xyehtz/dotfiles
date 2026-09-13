@@ -10,6 +10,7 @@
     ./modules/netbird-client.nix
     ./fonts.nix
     ../general/bootloader.nix
+    ../general/bluetooth.nix
     ./services/core-services.nix
   ];
 
@@ -23,10 +24,13 @@
     "amdgpu"
   ];
 
-  hardware.enableRedistributableFirmware = true;
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
+  # AMD Drivers
+  hardware = {
+    enableRedistributableFirmware = true;
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
   };
 
   # Undervolt Service
@@ -72,22 +76,6 @@
     pulse.enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
-  };
-
-  # Enable Bluetooth
-  hardware.bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-    settings = {
-      General = {
-        Experimental = true; # Show the battery of connected devices
-        FastConnectable = false; # The power consumptions trade-off is not worth it
-      };
-
-      Policy = {
-        AutoEnable = true;
-      };
-    };
   };
 
   # User account definition

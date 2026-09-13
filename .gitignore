@@ -1,4 +1,7 @@
 fish/fish_variables
+fish/completions
+fish/conf.d
+fish/functions
 .direnv
 .envrc
 .ytdl-sub-lock

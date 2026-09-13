@@ -5,16 +5,16 @@
   ...
 }: {
   imports = [
-    ./services/hardware-configuration.nix
+    ./hardware-configuration.nix
     ./services/matrix.nix
     ./services/pihole.nix
     ./services/unbound.nix
     ./services/netbird.nix
+    ../../general/bootloader.nix
+    ../../general/garbage-collection.nix
+    ../../general/ram-compression.nix
+    ../../general/auto-upgrade.nix
   ];
-
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos-homelab";
 

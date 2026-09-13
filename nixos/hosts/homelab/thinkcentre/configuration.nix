@@ -6,6 +6,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    # ./auto-upgrade.nix - FIXME: Currently testing if the Repo is reachable by Nix
     ./services/matrix.nix
     ./services/pihole.nix
     ./services/unbound.nix
@@ -13,7 +14,6 @@
     ../../general/bootloader.nix
     ../../general/garbage-collection.nix
     ../../general/ram-compression.nix
-    ../../general/auto-upgrade.nix
   ];
 
   networking.hostName = "nixos-homelab";

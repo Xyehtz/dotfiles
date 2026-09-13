@@ -6,9 +6,9 @@
 }: {
   imports = [
     ./hardware-configuration.nix
+    # ./auto-upgrade.nix - TEST: Check if Nix can reach the repo
     ../general/bootloader.nix
     ../general/bluetooth.nix
-    ../general/auto-upgrade.nix
     ../general/garbage-collection.nix
     ../general/ram-compression.nix
     ../general/sound.nix

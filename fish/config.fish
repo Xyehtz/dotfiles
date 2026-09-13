@@ -15,7 +15,7 @@ end
 
 # Start hyprland after logging in
 if test -z "$WAYLAND_DISPLAY" -a "$XDG_VTNR" = 1
-    exec niri-session
+    exec niri-session -l
 end
 
 # Remove the greeting message every time fish starts

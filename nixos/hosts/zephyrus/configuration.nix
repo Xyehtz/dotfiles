@@ -6,11 +6,12 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./auto-upgrade.nix
     ./modules/netbird-client.nix
     ./fonts.nix
     ../general/bootloader.nix
     ../general/bluetooth.nix
+    ../general/auto-upgrade.nix
+    ../general/garbage-collection.nix
     ./services/core-services.nix
   ];
 
@@ -41,12 +42,6 @@
       Type = "oneshot";
       ExecStart = "${pkgs.ryzenadj}/bin/ryzenadj --set-coall=10";
     };
-  };
-
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 15d";
   };
 
   # RAM Compression
@@ -108,14 +103,6 @@
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;
-  };
-
-  # Enable this for unpatched binaries in order to prevent issues. Specially with Zed extensions
-  programs.nix-ld = {
-    enable = true;
-    libraries = with pkgs; [
-      stdenv.cc.cc.lib
-    ];
   };
 
   environment.sessionVariables = {

@@ -9,14 +9,8 @@
     ./auto-upgrade.nix
     ./modules/netbird-client.nix
     ./fonts.nix
+    ../general/bootloader.nix
   ];
-
-  # Systemd Bootloader
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  # Use latest kernel.
-  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # --------------------------------Asus G14 2022 Specific--------------------------------
 

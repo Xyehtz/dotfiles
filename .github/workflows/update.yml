@@ -3,7 +3,6 @@ name: "Flake.lock Automatic Update"
 on:
   schedule:
     - cron: "0 5 * * THU"
-  workflow_dispatch:
 
 jobs:
   update-flake-on-hosts:

@@ -46,6 +46,12 @@
           lsp.enable = true;
           format.enable = true;
         };
+
+        yaml = {
+          enable = true;
+          format.enable = true;
+          lsp.enable = true;
+        };
       };
 
       options = {

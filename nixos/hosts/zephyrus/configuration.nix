@@ -6,8 +6,6 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./modules/netbird-client.nix
-    ./fonts.nix
     ../general/bootloader.nix
     ../general/bluetooth.nix
     ../general/auto-upgrade.nix
@@ -15,6 +13,7 @@
     ../general/ram-compression.nix
     ../general/sound.nix
     ./services/core-services.nix
+    ./services/netbird-client.nix
     ./programs.nix
   ];
 

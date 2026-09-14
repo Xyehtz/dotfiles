@@ -25,6 +25,7 @@
   environment.systemPackages = with pkgs; [
     # Terminal
     ghostty
+    tmux
 
     # Terminal applications
     nvtopPackages.amd
@@ -67,6 +68,7 @@
     tigervnc
     swift
     sourcekit-lsp
+    stirling-pdf-desktop
   ];
 
   # Allowed unfree software

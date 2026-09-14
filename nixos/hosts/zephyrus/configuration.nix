@@ -6,7 +6,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    # ./auto-upgrade.nix - TEST: Check if Nix can reach the repo
+    ./auto-upgrade.nix
     ../general/bootloader.nix
     ../general/bluetooth.nix
     ../general/garbage-collection.nix
@@ -18,14 +18,15 @@
   ];
 
   # ========Kernel and AMD GPU Driver settings=========
-  boot.kernelParams = [
-    "amd_pstate=active"
-  ];
-
-  boot.kernelModules = [
-    "asus-nb-wmi"
-    "amdgpu"
-  ];
+  boot = {
+    kernelParams = [
+      "amd_pstate=active"
+    ];
+    kernelModules = [
+      "asus-nb-wmi"
+      "amdgpu"
+    ];
+  };
 
   # AMD Drivers
   hardware = {

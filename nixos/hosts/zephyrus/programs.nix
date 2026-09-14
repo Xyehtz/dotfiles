@@ -65,6 +65,8 @@
     onlyoffice-desktopeditors
     teams-for-linux
     tigervnc
+    swift
+    sourcekit-lsp
   ];
 
   # Allowed unfree software

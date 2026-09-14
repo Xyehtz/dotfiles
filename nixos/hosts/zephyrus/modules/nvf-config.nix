@@ -1,9 +1,4 @@
-{
-  pkgs,
-  ...
-}:
-
-{
+{pkgs, ...}: {
   programs.nvf = {
     enable = true;
 
@@ -12,6 +7,13 @@
       telescope.enable = true;
       filetree.neo-tree.enable = true;
       autopairs.nvim-autopairs.enable = true;
+
+      treesitter = {
+        enable = true;
+
+        # Treesitter grammar for Swift
+        grammars = [pkgs.vimPlugins.nvim-treesitter-parsers.swift];
+      };
 
       # Leader key
       globals.mapleader = " ";
@@ -31,12 +33,12 @@
 
           lsp = {
             enable = true;
-            servers = [ "nixd" ]; # Preferred over nil
+            servers = ["nixd"]; # Preferred over nil
           };
 
           format = {
             enable = true;
-            type = [ "alejandra" ];
+            type = ["alejandra"];
           };
         };
 
@@ -64,11 +66,17 @@
         enable = true;
         presets.harper.enable = true;
         formatOnSave = true;
+
+        # Create a  custom server for SourceKit and Swift LSP
+        servers.sourcekit = {
+          cmd = ["${pkgs.sourcekit-lsp}/bin/sourcekit-lsp"];
+          filetypes = ["swift"];
+        };
       };
 
       autocomplete.nvim-cmp = {
         enable = true;
-        sourcePlugins = [ ];
+        sourcePlugins = [];
       };
       snippets.luasnip.enable = true;
 
@@ -107,7 +115,6 @@
       binds.whichKey.enable = true;
 
       extraPlugins = {
-
         # Autosave for Neovim
         auto-save = {
           package = pkgs.vimPlugins.auto-save-nvim;

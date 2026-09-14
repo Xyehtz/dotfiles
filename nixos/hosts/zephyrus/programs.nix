@@ -53,6 +53,7 @@
     fuzzel
     xwayland-satellite
     nix-search-cli
+    tailscale
 
     # SSH
     sshfs
@@ -63,6 +64,7 @@
     # School/College
     onlyoffice-desktopeditors
     teams-for-linux
+    tigervnc
   ];
 
   # Allowed unfree software

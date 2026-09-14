@@ -13,7 +13,7 @@
     ../general/ram-compression.nix
     ../general/sound.nix
     ./services/core-services.nix
-    ./services/netbird-client.nix
+    ./services/tailscale.nix
     ./programs.nix
   ];
 

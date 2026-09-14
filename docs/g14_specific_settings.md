@@ -13,9 +13,15 @@ It can be done like this, in my case I am using option 1.
 
 ```nix
 # amd_pstate needs to be set to active
-boot.kernelParams = [
-  "amd_pstate=active"
-];
+boot = {
+  kernelParams = [
+    "amd_pstate=active"
+  ];
+  kernelModules = [
+    "asus-nb-wmi"
+    "amdgpu"
+  ];
+};
 
 # Set the governor to performance
 services.auto-cpufreq.enable = true;
@@ -43,3 +49,7 @@ boot.extraModprobeConfig = ''
   options amdgpu runpm=0
 '';
 ```
+
+## Changelog
+### 13/09/2026 - Linux Kernel 7.2.5
+Recently updated to the Linux Kernel 7.2.5, but this results on the system hanging during startup, more specifically when loading the amdgp module onto the Kernel. Because of this the upgrades on the Zephyrus host have been delayed until next month in order to receive further updates that may resolve the current issue.

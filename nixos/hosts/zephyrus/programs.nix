@@ -58,6 +58,7 @@
 
     # SSH
     sshfs
+    termius
 
     # API Tester
     bruno
@@ -69,6 +70,7 @@
     swift
     sourcekit-lsp
     stirling-pdf-desktop
+    jetbrains.idea
   ];
 
   # Allowed unfree software
@@ -80,5 +82,7 @@
       "steam-run"
       "obsidian"
       "rpcs3"
+      "idea"
+      "termius"
     ];
 }

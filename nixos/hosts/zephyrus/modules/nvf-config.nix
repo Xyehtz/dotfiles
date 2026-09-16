@@ -56,6 +56,14 @@
           format.enable = true;
           lsp.enable = true;
         };
+
+        go = {
+          enable = true;
+          extensions.gopher-nvim.enable = true;
+          extraDiagnostics.enable = true;
+          format.enable = true;
+          lsp.enable = true;
+        };
       };
 
       options = {

@@ -1,10 +1,13 @@
-{ config, pkgs, lib, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   imports = [
     ./zed/extraZedPackages.nix
   ];
-  
+
   home.packages = with pkgs; [
     git
 
@@ -21,7 +24,8 @@
 
     # Coding agents
     opencode-desktop
- ];
+    opencode
+  ];
 
   # TODO: Try to use the zed-editor-fhs version to improve the usage on NixOS
   programs.zed-editor = import ./zed/zedSettings.nix {

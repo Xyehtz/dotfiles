@@ -1,4 +1,6 @@
 {pkgs, ...}: {
+  home.packages = with pkgs; [python314Packages.debugpy];
+
   programs.nvf = {
     enable = true;
 
@@ -71,6 +73,13 @@
         servers.sourcekit = {
           cmd = ["${pkgs.sourcekit-lsp}/bin/sourcekit-lsp"];
           filetypes = ["swift"];
+        };
+      };
+
+      debugger = {
+        nvim-dap = {
+          enable = true;
+          ui.enable = true;
         };
       };
 

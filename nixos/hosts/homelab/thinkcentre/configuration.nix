@@ -10,7 +10,7 @@
     ./services/matrix.nix
     ./services/pihole.nix
     ./services/unbound.nix
-    ./services/netbird.nix
+    ./services/tailscale.nix
     ../../general/bootloader.nix
     ../../general/garbage-collection.nix
     ../../general/ram-compression.nix

@@ -6,7 +6,7 @@
 }: {
   imports = [
     ./hardware-configuration.nix
-    # ./auto-upgrade.nix - FIXME: Currently testing if the Repo is reachable by Nix
+    ./auto-upgrade.nix # FIXME: Currently testing if the Repo is reachable by Nix
     ./services/matrix.nix
     ./services/pihole.nix
     ./services/unbound.nix

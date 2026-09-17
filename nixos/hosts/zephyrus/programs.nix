@@ -47,8 +47,9 @@
     # Email Client
     thunderbird
 
-    # VPN and File Sharing
+    # Network, VPN, and File Sharing
     localsend
+    tftp-hpa
 
     # Other
     fuzzel

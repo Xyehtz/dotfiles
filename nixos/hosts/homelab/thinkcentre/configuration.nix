@@ -14,6 +14,7 @@
     ../../general/bootloader.nix
     ../../general/garbage-collection.nix
     ../../general/ram-compression.nix
+    ./programs.nix
   ];
 
   networking.hostName = "nixos-homelab";
@@ -27,6 +28,7 @@
   users.users.mini-homelab = {
     isNormalUser = true;
     extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
+    shell = pkgs.fish;
   };
 
   environment.systemPackages = with pkgs; [

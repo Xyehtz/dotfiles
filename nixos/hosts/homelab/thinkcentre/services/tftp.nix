@@ -1,10 +1,11 @@
 {...}: {
   services.atftpd = {
     enable = true;
-    root = "/home/alej-garz/Downloads/brocade-09-08-2025/TFTP-Content";
+    root = "/srv/tftp";
     extraOptions = [
-      "--secure"
-      "-vvvv"
+      "--verbose=5"
     ];
   };
+
+  networking.firewall.allowedUDPPorts = [69];
 }

@@ -11,6 +11,7 @@
     ./services/pihole.nix
     ./services/unbound.nix
     ./services/tailscale.nix
+    ./services/tftp.nix
     ../../general/bootloader.nix
     ../../general/garbage-collection.nix
     ../../general/ram-compression.nix

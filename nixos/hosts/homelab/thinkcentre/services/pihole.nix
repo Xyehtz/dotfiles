@@ -1,10 +1,16 @@
-{ config, pkgs, lib, ... }:
-
 {
+  config,
+  pkgs,
+  lib,
+  ...
+}: {
   services.pihole-ftl = {
     enable = true;
     settings = {
-      dns.upstreams = [ "127.0.0.1#5335" ];
+      dns = {
+        upstreams = ["127.0.0.1#5335"];
+        hosts = ["192.168.68.68 synapse-admin.stryxredact.net"];
+      };
     };
 
     lists = [
@@ -31,9 +37,9 @@
 
   services.pihole-web = {
     enable = true;
-    ports = [ "440s" ]; # 443 is already in use by Matrix
+    ports = ["440s"]; # 443 is already in use by Matrix
   };
 
-  networking.firewall.allowedTCPPorts = [ 53 440 ];
-  networking.firewall.allowedUDPPorts = [ 53 ];
+  networking.firewall.allowedTCPPorts = [53 440];
+  networking.firewall.allowedUDPPorts = [53];
 }

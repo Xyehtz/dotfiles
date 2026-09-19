@@ -27,3 +27,13 @@ Host sheridan-github.com
   User git
   IdentityFile ~/.ssh/Sheridan-Github
   AddkeysToAgent yes
+
+# Network Switch
+Host 192.168.71.50
+  IdentitiesOnly yes
+  IdentityFile ~/.ssh/Brocade-Switch
+  KexAlgorithms +diffie-hellman-group1-sha1
+  HostKeyAlgorithms=+ssh-rsa
+  PubkeyAcceptedAlgorithms ssh-rsa
+  Ciphers +aes128-cbc,3des-cbc
+  MACs +hmac-sha1,hmac-md5

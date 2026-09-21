@@ -14,6 +14,7 @@
     ../general/sound.nix
     ./services/core-services.nix
     ./services/tailscale.nix
+    ./services/upower.nix
     ./programs.nix
   ];
 

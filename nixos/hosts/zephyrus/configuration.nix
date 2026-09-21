@@ -23,9 +23,9 @@
     kernelParams = [
       "amd_pstate=active"
     ];
-    kernelModules = [
-      "asus-nb-wmi"
-    ];
+    # kernelModules = [
+    #   "asus-nb-wmi"
+    # ];
   };
 
   # AMD Drivers

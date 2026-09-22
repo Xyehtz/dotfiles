@@ -7,9 +7,9 @@
 	
 	# Appereance
 	background = 0f0f11
-	theme = Zenwritten Dark
+	theme = Rose Pine
 	mouse-hide-while-typing = true
-	background-opacity = 0.75
+	background-opacity = 0.95
 	background-blur = macos-glass-regular
 	
 	# Window

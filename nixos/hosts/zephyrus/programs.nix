@@ -67,6 +67,8 @@
         bind '"' split-window -v -c "#{pane_current_path}"
         bind % split-window -h -c "#{pane_current_path}"
 
+        set -g cursor-style "blinking-bar"
+
         # Styles
         set -g status-style "bg=#191724"
         setw -g window-status-format "#[fg=#31748f,bg=#191724]#[fg=#191724,bg=#31748f] #I #[fg=#31748f,bg=#191724]#[fg=#e0def4,bg=#191724] #W "

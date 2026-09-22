@@ -19,13 +19,22 @@
       enable = true;
       nix-direnv.enable = true;
     };
+
+    tmux = {
+      enable = true;
+      plugins = with pkgs; [
+        tmuxPlugins.sensible
+        tmuxPlugins.vim-tmux-navigator
+        tmuxPlugins.rose-pine
+        tmuxPlugins.yank
+      ];
+    };
   };
 
   # Basic packages for the system
   environment.systemPackages = with pkgs; [
     # Terminal
     ghostty
-    tmux
 
     # Terminal applications
     nvtopPackages.amd

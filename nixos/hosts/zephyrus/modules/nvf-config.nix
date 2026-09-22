@@ -132,6 +132,9 @@
         };
       };
 
+      # Support for Tmux
+      utility.smart-splits.enable = true;
+
       # ==== Plugins Section ====
 
       # Better comments

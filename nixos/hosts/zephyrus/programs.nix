@@ -121,6 +121,9 @@
     # API Tester
     bruno
 
+    # Fish customization
+    oh-my-fish
+
     # School/College
     onlyoffice-desktopeditors
     teams-for-linux

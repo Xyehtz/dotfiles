@@ -22,8 +22,8 @@
 
       theme = {
         enable = true;
-        name = "mellow";
-        style = "moon";
+        name = "rose-pine";
+        style = "main";
       };
 
       languages = {
@@ -77,7 +77,7 @@
         presets.harper.enable = true;
         formatOnSave = true;
 
-        # Create a  custom server for SourceKit and Swift LSP
+        # Create a custom server for SourceKit and Swift LSP
         servers.sourcekit = {
           cmd = ["${pkgs.sourcekit-lsp}/bin/sourcekit-lsp"];
           filetypes = ["swift"];

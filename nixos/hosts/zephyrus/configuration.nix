@@ -16,6 +16,7 @@
     ./services/tailscale.nix
     ./services/upower.nix
     ./programs.nix
+    ./fonts.nix
   ];
 
   # ========Kernel and AMD GPU Driver settings=========

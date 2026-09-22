@@ -64,6 +64,17 @@
           format.enable = true;
           lsp.enable = true;
         };
+
+        env = {
+          enable = true;
+          extraDiagnostics.enable = true;
+        };
+
+        fish = {
+          enable = true;
+          format.enable = true;
+          lsp.enable = true;
+        };
       };
 
       options = {

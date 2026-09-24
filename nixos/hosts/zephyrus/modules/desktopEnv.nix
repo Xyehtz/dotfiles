@@ -3,9 +3,7 @@
   inputs,
   config,
   ...
-}:
-
-{
+}: {
   imports = [
     inputs.noctalia.homeModules.default
   ];
@@ -22,7 +20,6 @@
     enable = true;
 
     settings = {
-
       # The whole theme of this rice is to follow the Wallpaper
       theme = {
         mode = "dark";
@@ -122,7 +119,7 @@
         background_opacity = 0.9;
         offset_x = 20;
         offset_y = 8;
-        monitors = [ ];
+        monitors = [];
         collapse_on_dismiss = true;
         keep_dismissed_in_history = false;
         max_visible = 0;
@@ -140,7 +137,6 @@
         order = "main";
 
         default = {
-
           # Position and hide settings
           position = "top";
           enabled = true;
@@ -180,7 +176,7 @@
             "ram"
             "audio_visualizer"
           ];
-          center = [ "workspaces" ];
+          center = ["workspaces"];
           end = [
             "tray"
             "notifications"
@@ -188,14 +184,13 @@
             "bluetooth"
             "volume"
             "clock"
-            "control-center"
+            "battery"
             "session"
           ];
         };
       };
 
       widget = {
-
         # Start - Sysmon
         cpu = {
           type = "sysmon";

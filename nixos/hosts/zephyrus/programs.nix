@@ -33,6 +33,7 @@
         tmuxPlugins.vim-tmux-navigator
         tmuxPlugins.rose-pine
         tmuxPlugins.yank
+        tmuxPlugins.resurrect
       ];
 
       extraConfig = ''

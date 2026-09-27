@@ -45,7 +45,8 @@
     wantedBy = ["multi-user.target"];
     serviceConfig = {
       Type = "oneshot";
-      ExecStart = "${pkgs.ryzenadj}/bin/ryzenadj --set-coall=10";
+      RemainAfterExit = true;
+      ExecStart = "${pkgs.ryzenadj}/bin/ryzenadj --set-coall=-10";
     };
   };
 
@@ -67,7 +68,6 @@
       "networkmanager"
       "wheel"
       "video"
-      "corectrl"
     ];
     shell = pkgs.fish; # Fish is the default shell
   };

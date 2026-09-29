@@ -23,6 +23,7 @@
     # Settings here are based on https://github.com/dreamsofcode-io/tmux/blob/main/tmux.conf
     tmux = {
       enable = true;
+      terminal = "tmux-256color";
 
       extraConfigBeforePlugins = ''
         set -g @rose_pine_variant 'main'
@@ -39,6 +40,8 @@
       extraConfig = ''
         # True color
         set-option -sa terminal-overrides ",xterm*:Tc"
+        set -as terminal-features ",xterm-ghostty:RGB"
+        set -as terminal-features ",*256col*:RGB"
         set -g mouse on
 
         # Set Ctrl+Space as prefix

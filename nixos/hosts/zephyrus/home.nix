@@ -8,6 +8,7 @@
     ./modules/desktopEnv.nix
     ./modules/gaming.nix
     ./modules/nvf-config.nix
+    ./modules/helix.nix
 
     # NVF
     inputs.nvf.homeManagerModules.default

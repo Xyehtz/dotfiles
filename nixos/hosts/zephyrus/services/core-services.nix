@@ -2,6 +2,15 @@
   # Set the governor for the laptop when in battery and charger
   services = {
     asusd = {enable = true;};
+    cardwired = {
+      enable = true;
+      settings = {
+        auto_apply_gpu_state = true;
+        battery_auto_switch = true;
+        battery_auto_switch_mode = "smart";
+        external_display_auto_switch = true;
+      };
+    };
 
     auto-cpufreq = {
       enable = true;

@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   home.packages = with pkgs; [python314Packages.debugpy];
 
   programs.nvf = {
@@ -81,6 +85,7 @@
         tabstop = 2;
         shiftwidth = 2;
         expandtab = true;
+        foldlevel = 99;
       };
 
       lsp = {
@@ -135,6 +140,20 @@
       # Support for Tmux
       utility.smart-splits.enable = true;
 
+      autocmds = [
+        {
+          event = ["FileType"];
+          pattern = ["NvimTree" "neo-tree" "help" "qf"];
+          desc = "Disable ufo on special buffers";
+          callback = lib.generators.mkLuaInline ''
+            function()
+              require('ufo').detach()
+              vim.opt_local.foldenable = false
+            end
+          '';
+        }
+      ];
+
       # ==== Plugins Section ====
 
       # Better comments
@@ -171,6 +190,14 @@
             })
           '';
         };
+
+        promise-async.package = pkgs.vimPlugins.promise-async;
+      };
+
+      lazy.plugins."nvim-ufo" = {
+        package = pkgs.vimPlugins.nvim-ufo;
+        setupModule = "ufo";
+        setupOpts = {};
       };
     };
   };

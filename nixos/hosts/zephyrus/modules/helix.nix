@@ -9,7 +9,6 @@
     unit = "  ";
   };
   pythonWithDebugpy = pkgs.python314.withPackages (ps: [ps.debugpy]);
-
 in {
   programs.helix = {
     enable = true;
@@ -76,6 +75,11 @@ in {
           normal = "block";
           insert = "bar";
           select = "underline";
+        };
+
+        file-picker = {
+          hidden = false;
+          git-ignore = false;
         };
 
         auto-info = true;

@@ -42,8 +42,5 @@
     pulseaudio = {enable = false;};
 
     xserver = {videoDrivers = ["amdgpu"];};
-
-    # FIX: This should not be disabled, but needs to be in order to keep the rebuilds working
-    gnome.gcr-ssh-agent.enable = false;
   };
 }

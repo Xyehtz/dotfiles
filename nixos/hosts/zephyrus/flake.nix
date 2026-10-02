@@ -23,26 +23,37 @@
     nvf = {
       url = "github:notashelf/nvf";
     };
+
+    mangowm = {
+      url = "github:mangowm/mango";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, nvf, ... }@inputs: let inherit (nixpkgs) lib;
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    nvf,
+    ...
+  } @ inputs: let
+    inherit (nixpkgs) lib;
   in {
-   
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
+      specialArgs = {inherit inputs;};
       modules = [
         ./configuration.nix
         nvf.nixosModules.default
         home-manager.nixosModules.home-manager
-        
+
         {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
             users.alej-garz = import ./home.nix;
             backupFileExtension = "backup";
-            extraSpecialArgs = { inherit inputs; };
+            extraSpecialArgs = {inherit inputs;};
           };
         }
       ];

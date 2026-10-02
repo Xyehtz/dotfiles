@@ -15,8 +15,12 @@
     ./services/core-services.nix
     ./services/tailscale.nix
     ./services/upower.nix
+    ./services/ly.nix
     ./programs.nix
     ./fonts.nix
+
+    # MangoWM
+    inputs.mangowm.nixosModules.mango
   ];
 
   # ========Kernel and AMD GPU Driver settings=========
@@ -71,6 +75,8 @@
     ];
     shell = pkgs.fish; # Fish is the default shell
   };
+
+  programs.mango.enable = true;
 
   environment.sessionVariables = {
     MOZ_ENABLE_WAYLAND = "1";

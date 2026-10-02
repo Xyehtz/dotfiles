@@ -14,9 +14,9 @@ if not test -S $SSH_AUTH_SOCK
 end
 
 # Start hyprland after logging in
-if test -z "$WAYLAND_DISPLAY" -a "$XDG_VTNR" = 1
-    exec niri-session -l
-end
+# if test -z "$WAYLAND_DISPLAY" -a "$XDG_VTNR" = 1
+#     exec niri-session -l
+# end
 
 # Remove the greeting message every time fish starts
 set -g fish_greeting
@@ -27,7 +27,6 @@ cd ~
 # Add Cargo bin to PATH
 set -U fish_user_paths /home/alej-garz/.cargo/bin $fish_user_paths
 set -U fish_user_paths ~/.local/bin $fish_user_paths
-
 
 # Alias
 alias pomodoro="/home/alej-garz/Cool\ Tools/pomodoro-nix/result/bin/pomodoro"

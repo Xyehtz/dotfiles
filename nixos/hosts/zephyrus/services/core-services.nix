@@ -41,6 +41,8 @@
 
     pulseaudio = {enable = false;};
 
-    xserver = {videoDrivers = ["amdgpu"];};
+    xserver = {
+      videoDrivers = ["amdgpu"];
+    };
   };
 }

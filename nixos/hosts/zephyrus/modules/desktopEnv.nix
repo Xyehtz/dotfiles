@@ -253,4 +253,9 @@
     source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/niri/config.kdl";
     recursive = true;
   };
+
+  xdg.configFile."mango/config.conf" = {
+    source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/mango/config.conf";
+    recursive = true;
+  };
 }

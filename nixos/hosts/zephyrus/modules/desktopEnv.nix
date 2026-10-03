@@ -35,7 +35,7 @@
         fill_mode = "crop";
         transition_duration = 1500;
         edge_smoothness = 0.4;
-        directory = "$HOME/Projects/dotfiles/Wallpapers";
+        directory = "/home/alej-garz/Projects/dotfiles/Wallpapers/";
 
         # Automated wallpaper change
         automation = {

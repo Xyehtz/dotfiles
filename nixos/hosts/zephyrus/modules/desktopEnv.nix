@@ -14,6 +14,7 @@
   # Other packcages
   home.packages = with pkgs; [
     upower # Noctalia uses UPower for battery status
+    waybar
   ];
 
   programs.noctalia = {

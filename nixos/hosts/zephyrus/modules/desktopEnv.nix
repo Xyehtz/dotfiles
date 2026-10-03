@@ -14,7 +14,6 @@
   # Other packcages
   home.packages = with pkgs; [
     upower # Noctalia uses UPower for battery status
-    waybar
   ];
 
   programs.noctalia = {
@@ -153,8 +152,8 @@
           contact_shadow = true;
           radius_top_left = 0;
           radius_top_right = 0;
-          radius_bottom_left = 12;
-          radius_bottom_right = 12;
+          # radius_bottom_left = 12;
+          # radius_bottom_right = 12;
           margin_ends = 0;
           margin_edge = 0;
           padding = 14;

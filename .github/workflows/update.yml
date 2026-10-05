@@ -2,7 +2,7 @@ name: "Flake.lock Automatic Update"
 
 on:
   schedule:
-    - cron: "0 5 * * THU"
+    - cron: "0 0 1 * *"
 
 jobs:
   update-flake-on-hosts:
@@ -14,9 +14,8 @@ jobs:
       - uses: cachix/install-nix-action@v31
       - name: Update Flake.lock of the Zephyrus host
         run: |
-          # TEST - This is being disabled for the time being as amdgpu has issues loading to the kernel on Linux 7.2.x
-          # cd "$GITHUB_WORKSPACE/nixos/hosts/zephyrus"
-          # nix flake update
+          cd "$GITHUB_WORKSPACE/nixos/hosts/zephyrus"
+          nix flake update
 
           cd "$GITHUB_WORKSPACE/nixos/hosts/homelab/thinkcentre"
           nix flake update

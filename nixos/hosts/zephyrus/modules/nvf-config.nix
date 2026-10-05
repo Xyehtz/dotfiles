@@ -79,6 +79,15 @@
           format.enable = true;
           lsp.enable = true;
         };
+
+        markdown = {
+          enable = true;
+          format.enable = true;
+          lsp.enable = true;
+          extensions = {
+            markview-nvim.enable = true;
+          };
+        };
       };
 
       options = {

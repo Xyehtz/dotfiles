@@ -11,7 +11,7 @@
   # File Manager
   programs.yazi.enable = true;
 
-  # Other packcages
+  # Other packages
   home.packages = with pkgs; [
     upower # Noctalia uses UPower for battery status
 

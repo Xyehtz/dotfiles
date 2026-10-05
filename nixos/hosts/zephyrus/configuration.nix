@@ -76,7 +76,19 @@
     shell = pkgs.fish; # Fish is the default shell
   };
 
+  # MangoWM settings
   programs.mango.enable = true;
+
+  # Enable MangoWM Screen Sharing
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = [pkgs.xdg-desktop-portal-wlr];
+  };
+
+  systemd.user.services = {
+    xdg-desktop-portal-wlr.path = [pkgs.fuzzel];
+  };
 
   environment.sessionVariables = {
     MOZ_ENABLE_WAYLAND = "1";

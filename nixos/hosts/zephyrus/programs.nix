@@ -148,6 +148,7 @@
       "obsidian"
       "rpcs3"
       "idea"
+      "intellij-idea"
       "termius"
     ];
 }

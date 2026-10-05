@@ -1,13 +1,19 @@
 # ROG Zephyrus G14 specific settings
-The 2022 model of the Asus ROG G14 line has certain issues on Linux that can cause important disruption when using the laptop.
+
+The 2022 model of the Asus ROG G14 line has certain issues on Linux that can
+cause important disruption when using the laptop.
 
 The issue that I experienced the most where
+
 - Constant freezing (specially when the computer was idle)
 - Constant kernel panics on boot and immediately after
 
-These two issues would happen in less than 2 or 3 minutes, and it would happen on battery or AC
+These two issues would happen in less than 2 or 3 minutes, and it would happen
+on battery or AC
 
-The solution I found to work for this was on a [Reddit thread](www.reddit.com/r/ZephyrusG14/comments/lodi4ma/comment/nie1z2n/?force-legacy-sct=1). This solution is based for fedora, but the application on Nix is not hard.
+The solution I found to work for this was on a
+[Reddit thread](www.reddit.com/r/ZephyrusG14/comments/lodi4ma/comment/nie1z2n/?force-legacy-sct=1).
+This solution is based for fedora, but the application on Nix is not hard.
 
 It can be done like this, in my case I am using option 1.
 
@@ -38,7 +44,8 @@ services.auto-cpufreq.settings = {
 };
 ```
 
-There are other settings that can be used for this, but they decrease the battery life significantly.
+There are other settings that can be used for this, but they decrease the
+battery life significantly.
 
 ```nix
 boot.kernelParams = [
@@ -51,5 +58,16 @@ boot.extraModprobeConfig = ''
 ```
 
 ## Changelog
+
 ### 13/09/2026 - Linux Kernel 7.2.5
-Recently updated to the Linux Kernel 7.2.5, but this results on the system hanging during startup, more specifically when loading the amdgp module onto the Kernel. Because of this the upgrades on the Zephyrus host have been delayed until next month in order to receive further updates that may resolve the current issue.
+
+Recently updated to the Linux Kernel 7.2.5, but this results on the system
+hanging during startup, more specifically when loading the amdgp module onto the
+Kernel. Because of this the upgrades on the Zephyrus host have been delayed
+until next month in order to receive further updates that may resolve the
+current issue.
+
+### 05/10/2026 - Updated to Linux Kernel 7.2.9
+
+The issue that was happening on the Linux Kernel version 7.2.5 is no longer
+happening on the latest release of the Linux Kernel.

@@ -5,7 +5,7 @@
 }: {
   imports = [
     ./modules/development/development.nix
-    ./modules/desktopEnv.nix
+    ./modules/desktop-env.nix
     ./modules/gaming.nix
     ./modules/nvf-config.nix
     ./modules/helix.nix

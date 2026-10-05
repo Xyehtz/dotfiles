@@ -14,6 +14,11 @@
   # Other packcages
   home.packages = with pkgs; [
     upower # Noctalia uses UPower for battery status
+
+    # Screenshot (MangoWM)
+    grim
+    slurp
+    wayfreeze
   ];
 
   programs.noctalia = {
@@ -254,8 +259,8 @@
     recursive = true;
   };
 
-  xdg.configFile."mango/config.conf" = {
-    source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/mango/config.conf";
+  xdg.configFile."mango" = {
+    source = config.lib.file.mkOutOfStoreSymlink "/home/alej-garz/Projects/dotfiles/mango/";
     recursive = true;
   };
 }

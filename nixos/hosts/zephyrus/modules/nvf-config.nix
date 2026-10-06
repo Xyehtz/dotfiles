@@ -116,9 +116,9 @@
         };
       };
 
-      autocomplete.nvim-cmp = {
+      autocomplete.blink-cmp = {
         enable = true;
-        sourcePlugins = [];
+        setupOpts.sources.default = ["lsp" "path" "snippets" "buffer"];
       };
       snippets.luasnip.enable = true;
 

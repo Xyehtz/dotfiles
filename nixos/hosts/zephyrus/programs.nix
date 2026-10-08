@@ -19,6 +19,7 @@
       enable = true;
       nix-direnv.enable = true;
     };
+  };
 
   # Basic packages for the system
   environment.systemPackages = with pkgs; [
@@ -42,9 +43,6 @@
 
     # Notes
     obsidian
-
-    # Email Client
-    thunderbird
 
     # VPN, and File Sharing
     localsend
@@ -71,8 +69,6 @@
     tigervnc
     swift
     sourcekit-lsp
-    stirling-pdf-desktop
-    jetbrains.idea
   ];
 
   # Allowed unfree software

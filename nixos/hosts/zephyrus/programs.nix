@@ -96,6 +96,7 @@
     ryzenadj
     yt-dlp
     corectrl
+    github-cli
 
     # Browser
     librewolf

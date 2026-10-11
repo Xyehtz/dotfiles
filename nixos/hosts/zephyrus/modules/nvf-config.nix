@@ -122,6 +122,8 @@
       };
       snippets.luasnip.enable = true;
 
+      visuals.fidget-nvim.enable = true;
+
       diagnostics = {
         enable = true;
 
@@ -145,9 +147,6 @@
           };
         };
       };
-
-      # Support for Tmux
-      utility.smart-splits.enable = true;
 
       autocmds = [
         {

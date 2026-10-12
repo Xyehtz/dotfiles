@@ -13,6 +13,7 @@
     ./services/tailscale.nix
     ./services/tftp.nix
     ./services/matrix-caddy.nix
+    ./services/caremonda.nix
     ../../general/bootloader.nix
     ../../general/garbage-collection.nix
     ../../general/ram-compression.nix

@@ -88,6 +88,12 @@
             markview-nvim.enable = true;
           };
         };
+
+        zig = {
+          enable = true;
+          dap.enable = true;
+          lsp.enable = true;
+        };
       };
 
       options = {
@@ -99,13 +105,19 @@
 
       lsp = {
         enable = true;
-        presets.harper.enable = true;
         formatOnSave = true;
 
         # Create a custom server for SourceKit and Swift LSP
         servers.sourcekit = {
           cmd = ["${pkgs.sourcekit-lsp}/bin/sourcekit-lsp"];
           filetypes = ["swift"];
+        };
+
+        presets = {
+          harper.enable = true;
+
+          # Zig
+          zls.enable = true;
         };
       };
 

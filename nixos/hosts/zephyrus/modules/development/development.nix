@@ -17,7 +17,6 @@
     marksman # Markdown
     taplo # TOML
     codebook # Spellcheck
-    typescript-language-server # TypeScript and JavaScript
     tailwindcss-language-server # Tailwind
     vscode-langservers-extracted # HTML and CSS
     superhtml # HTML

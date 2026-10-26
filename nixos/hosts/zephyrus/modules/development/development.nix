@@ -10,6 +10,7 @@
 
   home.packages = with pkgs; [
     git
+    jujutsu
 
     # LSPs
     yaml-language-server # Nix

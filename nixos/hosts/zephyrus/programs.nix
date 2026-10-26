@@ -34,6 +34,7 @@
     yt-dlp
     corectrl
     github-cli
+    gh-dash
 
     # Browser
     librewolf

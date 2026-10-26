@@ -1,6 +1,4 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   # Gaming clients, and other gaming related applications
   home.packages = with pkgs; [
     gamescope
@@ -8,7 +6,6 @@
 
     # Clients
     steam
-    lutris
     heroic
 
     # Mod Clients

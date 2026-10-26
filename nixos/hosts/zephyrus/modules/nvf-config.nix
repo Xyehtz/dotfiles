@@ -14,6 +14,14 @@
       filetree.neo-tree.enable = true;
       autopairs.nvim-autopairs.enable = true;
 
+      utility = {
+        yazi-nvim.enable = true;
+      };
+
+      ui = {
+        modes-nvim.enable = true;
+      };
+
       treesitter = {
         enable = true;
 
@@ -119,6 +127,8 @@
           # Zig
           zls.enable = true;
         };
+
+        otter-nvim.enable = true;
       };
 
       debugger = {
@@ -134,7 +144,11 @@
       };
       snippets.luasnip.enable = true;
 
-      visuals.fidget-nvim.enable = true;
+      visuals = {
+        fidget-nvim.enable = true;
+        twilight-nvim.enable = true;
+        indent-blankline.enable = true;
+      };
 
       diagnostics = {
         enable = true;
@@ -193,7 +207,11 @@
         enable = true;
         mappings.closeCurrent = "<leader>bd";
       };
-      binds.whichKey.enable = true;
+
+      binds = {
+        whichKey.enable = true;
+        hardtime-nvim.enable = true;
+      };
 
       extraPlugins = {
         # Autosave for Neovim

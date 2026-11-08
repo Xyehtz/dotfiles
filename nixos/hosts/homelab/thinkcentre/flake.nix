@@ -3,12 +3,20 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nix-minecraft.url = "github:Infinidoge/nix-minecraft";
   };
 
-  outputs = { self, nixpkgs }: {
+  outputs = inputs @ {
+    self,
+    nixpkgs,
+    nix-minecraft,
+  }: {
     nixosConfigurations.mini-homelab = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      modules = [ ./configuration.nix ];
+      specialArgs = {inherit inputs;};
+      modules = [
+        ./configuration.nix
+      ];
     };
   };
 }

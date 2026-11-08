@@ -86,11 +86,15 @@ hash = "b44c8e45eaa44129913928bbc0174ec5eb0f9ec10a918231dd8dfad1ab94e2da"
 metafile = true
 
 [[files]]
-file = "mods/tectonic.pw.toml"
-hash = "1fbc846f05a8ee7fee1f20d1715db11c186a9b21eeaf13300f55a924c298661e"
+file = "mods/terrablender.pw.toml"
+hash = "93dda82fd6b3af8a0a69e669241a1c80b3640bcc65cb77258418930eb5477335"
 metafile = true
 
 [[files]]
 file = "mods/terralith.pw.toml"
 hash = "11753ff4740122b98d7b0aae3eccda9a4ff289c23448c7abfd0c8dbc425b10c7"
 metafile = true
+
+[[files]]
+file = "server.nix"
+hash = "1090ce97f10baaf094d48735b23c0b0554e1c7913b85ecefb4bc9f1ad62b6d91"

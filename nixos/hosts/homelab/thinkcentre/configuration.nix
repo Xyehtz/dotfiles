@@ -2,11 +2,12 @@
   config,
   lib,
   pkgs,
+  inputs,
   ...
 }: {
   imports = [
     ./hardware-configuration.nix
-    ./auto-upgrade.nix # FIXME: Currently testing if the Repo is reachable by Nix
+    ./auto-upgrade.nix
     ./services/matrix.nix
     ./services/pihole.nix
     ./services/unbound.nix
@@ -18,6 +19,14 @@
     ../../general/garbage-collection.nix
     ../../general/ram-compression.nix
     ./programs.nix
+    ./modules/minecraft-server/server.nix
+
+    inputs.nix-minecraft.nixosModules.minecraft-servers
+  ];
+
+  # Overlay for the Minecraft Server
+  nixpkgs.overlays = [
+    inputs.nix-minecraft.overlay
   ];
 
   networking.hostName = "nixos-homelab";

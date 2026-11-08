@@ -102,6 +102,23 @@
           dap.enable = true;
           lsp.enable = true;
         };
+
+        bash = {
+          enable = true;
+          extraDiagnostics.enable = true;
+          format.enable = true;
+          lsp.enable = true;
+        };
+
+        rust = {
+          enable = true;
+          dap.enable = true;
+          extensions = {
+            crates-nvim.enable = true;
+          };
+          format.enable = true;
+          lsp.enable = true;
+        };
       };
 
       options = {

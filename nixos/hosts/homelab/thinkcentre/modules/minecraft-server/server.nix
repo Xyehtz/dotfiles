@@ -5,8 +5,8 @@
   ...
 }: let
   modpack = pkgs.fetchPackwizModpack {
-    url = "https://raw.githubusercontent.com/Xyehtz/dotfiles/85b7bffe768fedf108cbc2948f628882814ac42d/nixos/hosts/homelab/thinkcentre/modules/minecraft-server/pack.toml";
-    packHash = "sha256-dR0s4QVxTvYPqECcucRi9Jr6xTtVXBD3Hp9mMoMrWy8=";
+    url = "https://raw.githubusercontent.com/Xyehtz/dotfiles/e4590edaafded4314d13b49e90d68acd534bd272/nixos/hosts/homelab/thinkcentre/modules/minecraft-server/pack.toml";
+    packHash = "sha256-8Nmk93SdLp7WEkgrctVTpP2bGvU//bOLIkMKP6PrnBE=";
   };
 in {
   services.minecraft-servers = {

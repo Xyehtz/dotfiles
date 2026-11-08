@@ -1,6 +1,16 @@
 hash-format = "sha256"
 
 [[files]]
+file = "mods/3dskinlayers.pw.toml"
+hash = "bb194ec7f1affde2fb2d6d052683e96babe72b693e4c3263dfd8245d3941b701"
+metafile = true
+
+[[files]]
+file = "mods/appleskin.pw.toml"
+hash = "ff675667f4c6924a9eaebc42dc2df5306dc5e8b005e931d9d8b73cebad67d5eb"
+metafile = true
+
+[[files]]
 file = "mods/better-combat.pw.toml"
 hash = "966452daf5072e4cb6e8a855ab74bb0eb4d8635701bf2bc1bade5bd5418bf725"
 metafile = true
@@ -16,8 +26,18 @@ hash = "d42635f415c03bff51cb7e569a58d33f5f2204388c6a685b95598e7137666a15"
 metafile = true
 
 [[files]]
+file = "mods/chat-heads.pw.toml"
+hash = "7959f11cce0c14ffae150d4a3126b04b70b0af815d25453110d2a8408011e9cb"
+metafile = true
+
+[[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "2b9727522c90a979eb9671ad7c5421443d91391b0697d1772146e6bfa19cb3c1"
+metafile = true
+
+[[files]]
+file = "mods/ct-overhaul-village.pw.toml"
+hash = "755334070ee4edc4b2f5701a45de3c883d93d4c5dbb85adac9a71556592b8a92"
 metafile = true
 
 [[files]]
@@ -36,8 +56,18 @@ hash = "069d81cab53c0141459ad4d70bcf3e10f17652f24cc62d3b4a0fc2cd2b700871"
 metafile = true
 
 [[files]]
+file = "mods/friends-and-foes.pw.toml"
+hash = "1651b6f7658f77b3d4b4d49ff6bb7c6397f5814da5c3ef00225b709dd1c0f979"
+metafile = true
+
+[[files]]
 file = "mods/glitchcore.pw.toml"
 hash = "91ecd94661955cc5d785c021de60311462afac1e0b827e53a7f926c1f7131f99"
+metafile = true
+
+[[files]]
+file = "mods/inventoryhudplus.pw.toml"
+hash = "e07964e5219e97155daad638919ee3581cb4bdbe440bfcfc8e997af6e4bef0a7"
 metafile = true
 
 [[files]]
@@ -66,6 +96,11 @@ hash = "3b3b9e886735bd8d8809954b7da8d1cca5b8186086379f129f0e4183470a7b2b"
 metafile = true
 
 [[files]]
+file = "mods/naturalist.pw.toml"
+hash = "15e7405fb9ffa10e8b64234e41ab5031a0ea3c20625aeac25e23334c8f1307c0"
+metafile = true
+
+[[files]]
 file = "mods/origins-legacy.pw.toml"
 hash = "3c0d446998aad3c398c79ded64ab3a4458678a6f379b4102145b7125951c4f39"
 metafile = true
@@ -73,6 +108,11 @@ metafile = true
 [[files]]
 file = "mods/player-animation-library.pw.toml"
 hash = "edcf67f591069ab1b95b375c673bce575b56869ae3ca3adccc6cfb7bf76e70ab"
+metafile = true
+
+[[files]]
+file = "mods/resourceful-lib.pw.toml"
+hash = "e6ca37d8afd4ff9cdaa25aeac50578651da148ba9de3f37794bde6af82460ec0"
 metafile = true
 
 [[files]]
@@ -93,4 +133,9 @@ metafile = true
 [[files]]
 file = "mods/terralith.pw.toml"
 hash = "11753ff4740122b98d7b0aae3eccda9a4ff289c23448c7abfd0c8dbc425b10c7"
+metafile = true
+
+[[files]]
+file = "mods/xaeros-minimap.pw.toml"
+hash = "14e96b12f10a1f2920cdcec89b4d16e452bec4689e117b38b4c0f759145aaf7f"
 metafile = true

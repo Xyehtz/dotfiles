@@ -97,4 +97,4 @@ metafile = true
 
 [[files]]
 file = "server.nix"
-hash = "1090ce97f10baaf094d48735b23c0b0554e1c7913b85ecefb4bc9f1ad62b6d91"
+hash = "3c6677b3b02c4f22d95e2c523fdecbdd465db9cc44a0357b0f6bf3e41a14e741"

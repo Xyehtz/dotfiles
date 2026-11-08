@@ -16,5 +16,6 @@
 
     # Minecraft
     prismlauncher
+    packwiz
   ];
 }

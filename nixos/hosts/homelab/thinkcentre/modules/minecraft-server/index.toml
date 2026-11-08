@@ -94,7 +94,3 @@ metafile = true
 file = "mods/terralith.pw.toml"
 hash = "11753ff4740122b98d7b0aae3eccda9a4ff289c23448c7abfd0c8dbc425b10c7"
 metafile = true
-
-[[files]]
-file = "server.nix"
-hash = "3c6677b3b02c4f22d95e2c523fdecbdd465db9cc44a0357b0f6bf3e41a14e741"

@@ -1,6 +1,9 @@
-{ config, pkg, lib, ... }:
-
-let
+{
+  config,
+  pkg,
+  lib,
+  ...
+}: let
   domain = "stryxredact.net";
   matrixDomain = "matrix.${domain}";
   rtcDomain = "rtc.${domain}";
@@ -25,8 +28,12 @@ let
     add_header Access-Control-Allow-Origin *;
     return 200 '${builtins.toJSON data}';
   '';
-
 in {
+  # Live Kit requires the following ENV
+  systemd.services.lk-jwt-service.environment = {
+    LIVEKIT_FULL_ACCESS_HOMESERVERS = domain;
+  };
+
   services.matrix-synapse = {
     enable = true;
     settings = {
@@ -165,8 +172,11 @@ in {
     port = 8080;
   };
 
-  networking.firewall.allowedTCPPorts = [ 8448 80 443 7881];
+  networking.firewall.allowedTCPPorts = [8448 80 443 7881];
   networking.firewall.allowedUDPPortRanges = [
-    { from = 50000; to = 60000; }
+    {
+      from = 50000;
+      to = 60000;
+    }
   ];
 }

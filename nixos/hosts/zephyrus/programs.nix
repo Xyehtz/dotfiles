@@ -72,6 +72,11 @@
     sourcekit-lsp
   ];
 
+  # HACK: This is an issue with OnlyOffice, check in the future if this keeps happening
+  nixpkgs.config.problems.handlers = {
+    "gtk+".broken = "warn"; # or "ignore"
+  };
+
   # Allowed unfree software
   nixpkgs.config.allowUnfreePredicate = pkg:
     builtins.elem (lib.getName pkg) [

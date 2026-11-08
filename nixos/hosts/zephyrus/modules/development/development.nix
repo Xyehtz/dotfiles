@@ -14,7 +14,7 @@
 
     # LSPs
     yaml-language-server # Nix
-    ltex-ls # Markdown
+    ltex-ls-plus # Markdown
     marksman # Markdown
     taplo # TOML
     codebook # Spellcheck
@@ -23,8 +23,8 @@
     superhtml # HTML
 
     # Coding agents
-    opencode-desktop
-    opencode
+    # opencode-desktop
+    # opencode
   ];
 
   # TODO: Try to use the zed-editor-fhs version to improve the usage on NixOS

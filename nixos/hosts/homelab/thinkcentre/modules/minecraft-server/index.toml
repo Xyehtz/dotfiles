@@ -41,11 +41,6 @@ hash = "755334070ee4edc4b2f5701a45de3c883d93d4c5dbb85adac9a71556592b8a92"
 metafile = true
 
 [[files]]
-file = "mods/enchancement.pw.toml"
-hash = "b0d18c904febd22db6903d1e2d4718fc1015b4135fee02cfa7a730a64ca0d496"
-metafile = true
-
-[[files]]
 file = "mods/fabric-api.pw.toml"
 hash = "79de372a05dde6ee4f23ced936835dbd9d43b64ba61ae1990cb0e59dce460e6a"
 metafile = true
@@ -53,6 +48,11 @@ metafile = true
 [[files]]
 file = "mods/ferrite-core.pw.toml"
 hash = "069d81cab53c0141459ad4d70bcf3e10f17652f24cc62d3b4a0fc2cd2b700871"
+metafile = true
+
+[[files]]
+file = "mods/forge-config-api-port.pw.toml"
+hash = "3eb12471fce0aadbda432f7fd5ba4e2120e0e0ebbb3663eea756a17ec0254407"
 metafile = true
 
 [[files]]
@@ -68,6 +68,11 @@ metafile = true
 [[files]]
 file = "mods/inventoryhudplus.pw.toml"
 hash = "e07964e5219e97155daad638919ee3581cb4bdbe440bfcfc8e997af6e4bef0a7"
+metafile = true
+
+[[files]]
+file = "mods/leaves-be-gone.pw.toml"
+hash = "7af31ba6f410c0f3d33b60b35de3c2a3a1e8ccba2f479bb36e72232e3984618b"
 metafile = true
 
 [[files]]
@@ -111,6 +116,11 @@ hash = "edcf67f591069ab1b95b375c673bce575b56869ae3ca3adccc6cfb7bf76e70ab"
 metafile = true
 
 [[files]]
+file = "mods/puzzles-lib.pw.toml"
+hash = "1d781325cf9001dddce371f093e679e84e93024d62cc28e367343c4cc1d8ca04"
+metafile = true
+
+[[files]]
 file = "mods/resourceful-lib.pw.toml"
 hash = "e6ca37d8afd4ff9cdaa25aeac50578651da148ba9de3f37794bde6af82460ec0"
 metafile = true
@@ -118,6 +128,11 @@ metafile = true
 [[files]]
 file = "mods/servux.pw.toml"
 hash = "01a8553390795e7b20629a9ea8fade9d01a8738efa852f00d9c5f4ba7ebe7a74"
+metafile = true
+
+[[files]]
+file = "mods/sound-physics-remastered.pw.toml"
+hash = "9bab2f7038705a3a14c522ef378743465a596f2d1e28305c2c9a291cbb7d6289"
 metafile = true
 
 [[files]]
@@ -133,6 +148,11 @@ metafile = true
 [[files]]
 file = "mods/terralith.pw.toml"
 hash = "11753ff4740122b98d7b0aae3eccda9a4ff289c23448c7abfd0c8dbc425b10c7"
+metafile = true
+
+[[files]]
+file = "mods/visual-workbench.pw.toml"
+hash = "52f2715ca5d645d7f5e49850287cea06626c0c92a3464530f51d5d6d6e5f7f51"
 metafile = true
 
 [[files]]

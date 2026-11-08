@@ -28,6 +28,10 @@
       url = "github:mangowm/mango";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    rex = {
+      url = "https://pkgs.superlogical.com/rex/nix/snapshot.tar.gz";
+    };
   };
 
   outputs = {
@@ -35,6 +39,7 @@
     nixpkgs,
     home-manager,
     nvf,
+    rex,
     ...
   } @ inputs: let
     inherit (nixpkgs) lib;
@@ -53,6 +58,16 @@
             users.alej-garz = import ./home.nix;
             backupFileExtension = "backup";
             extraSpecialArgs = {inherit inputs;};
+          };
+        }
+        rex.nixosModules.default
+        {
+          services.rex.enable = true;
+          users.users.alej-garz = {
+            isNormalUser = true;
+            extraGroups = [
+              "rex"
+            ];
           };
         }
       ];

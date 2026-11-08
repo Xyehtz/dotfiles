@@ -13,5 +13,8 @@
 
     # Emulators
     rpcs3
+
+    # Minecraft
+    prismlauncher
   ];
 }

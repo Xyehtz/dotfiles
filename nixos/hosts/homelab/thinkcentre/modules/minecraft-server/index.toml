@@ -1,0 +1,96 @@
+hash-format = "sha256"
+
+[[files]]
+file = "mods/better-combat.pw.toml"
+hash = "966452daf5072e4cb6e8a855ab74bb0eb4d8635701bf2bc1bade5bd5418bf725"
+metafile = true
+
+[[files]]
+file = "mods/biomes-o-plenty.pw.toml"
+hash = "fe50c2c2fdf37113558e13edbd647c369d4e797f49bd2174b59b585c5e9b6e46"
+metafile = true
+
+[[files]]
+file = "mods/c2me-fabric.pw.toml"
+hash = "d42635f415c03bff51cb7e569a58d33f5f2204388c6a685b95598e7137666a15"
+metafile = true
+
+[[files]]
+file = "mods/cloth-config.pw.toml"
+hash = "2b9727522c90a979eb9671ad7c5421443d91391b0697d1772146e6bfa19cb3c1"
+metafile = true
+
+[[files]]
+file = "mods/enchancement.pw.toml"
+hash = "b0d18c904febd22db6903d1e2d4718fc1015b4135fee02cfa7a730a64ca0d496"
+metafile = true
+
+[[files]]
+file = "mods/fabric-api.pw.toml"
+hash = "79de372a05dde6ee4f23ced936835dbd9d43b64ba61ae1990cb0e59dce460e6a"
+metafile = true
+
+[[files]]
+file = "mods/ferrite-core.pw.toml"
+hash = "069d81cab53c0141459ad4d70bcf3e10f17652f24cc62d3b4a0fc2cd2b700871"
+metafile = true
+
+[[files]]
+file = "mods/glitchcore.pw.toml"
+hash = "91ecd94661955cc5d785c021de60311462afac1e0b827e53a7f926c1f7131f99"
+metafile = true
+
+[[files]]
+file = "mods/lithium.pw.toml"
+hash = "b44f3ab71e52f1aaae97cf8644f2316042de8b7777d6b6794567c8c7d220bd2b"
+metafile = true
+
+[[files]]
+file = "mods/lithostitched.pw.toml"
+hash = "f4c7c038c07a70112f53d904eb730ce3ca2af7c6b8caba4437b1d88dc9df395b"
+metafile = true
+
+[[files]]
+file = "mods/malilib.pw.toml"
+hash = "aa19aaf146fb03f895583147e1906b950c9acc2c31a16110d3764401a65a79e1"
+metafile = true
+
+[[files]]
+file = "mods/minihud.pw.toml"
+hash = "3cc0adb13783202ba6b53fdfc3a0dfed4b9d0e95c9c186a4796b3530c2d83c13"
+metafile = true
+
+[[files]]
+file = "mods/modernfix-mvus.pw.toml"
+hash = "3b3b9e886735bd8d8809954b7da8d1cca5b8186086379f129f0e4183470a7b2b"
+metafile = true
+
+[[files]]
+file = "mods/origins-legacy.pw.toml"
+hash = "3c0d446998aad3c398c79ded64ab3a4458678a6f379b4102145b7125951c4f39"
+metafile = true
+
+[[files]]
+file = "mods/player-animation-library.pw.toml"
+hash = "edcf67f591069ab1b95b375c673bce575b56869ae3ca3adccc6cfb7bf76e70ab"
+metafile = true
+
+[[files]]
+file = "mods/servux.pw.toml"
+hash = "01a8553390795e7b20629a9ea8fade9d01a8738efa852f00d9c5f4ba7ebe7a74"
+metafile = true
+
+[[files]]
+file = "mods/strawberrylib.pw.toml"
+hash = "b44c8e45eaa44129913928bbc0174ec5eb0f9ec10a918231dd8dfad1ab94e2da"
+metafile = true
+
+[[files]]
+file = "mods/tectonic.pw.toml"
+hash = "1fbc846f05a8ee7fee1f20d1715db11c186a9b21eeaf13300f55a924c298661e"
+metafile = true
+
+[[files]]
+file = "mods/terralith.pw.toml"
+hash = "11753ff4740122b98d7b0aae3eccda9a4ff289c23448c7abfd0c8dbc425b10c7"
+metafile = true

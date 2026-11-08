@@ -1,0 +1,13 @@
+name = "Enchancement"
+filename = "enchancement-fabric-26.3-r4.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/6hN1V6wJ/versions/wsmJktf2/enchancement-fabric-26.3-r4.jar"
+hash-format = "sha512"
+hash = "026ba47059f969c987b6d191afaaee0dae206003c5bfc3e7907f48651e80351e99a567fbdeedcb9439134da22c27d383c74d65de4b0ce1af370da5d3e75c7f76"
+
+[update]
+[update.modrinth]
+mod-id = "6hN1V6wJ"
+version = "wsmJktf2"

@@ -11,6 +11,11 @@ hash = "ff675667f4c6924a9eaebc42dc2df5306dc5e8b005e931d9d8b73cebad67d5eb"
 metafile = true
 
 [[files]]
+file = "mods/balm.pw.toml"
+hash = "3f529d5fd5e99dbcba1364cfc68eefc9235e6956dcd05f4c6554116f89d9c9c9"
+metafile = true
+
+[[files]]
 file = "mods/better-combat.pw.toml"
 hash = "966452daf5072e4cb6e8a855ab74bb0eb4d8635701bf2bc1bade5bd5418bf725"
 metafile = true
@@ -31,6 +36,11 @@ hash = "7959f11cce0c14ffae150d4a3126b04b70b0af815d25453110d2a8408011e9cb"
 metafile = true
 
 [[files]]
+file = "mods/chatanimation.pw.toml"
+hash = "25fb78b1df295ff5bd35dc4d9181cbfe3040f0298c7e898f2bc389395d887ccd"
+metafile = true
+
+[[files]]
 file = "mods/cloth-config.pw.toml"
 hash = "2b9727522c90a979eb9671ad7c5421443d91391b0697d1772146e6bfa19cb3c1"
 metafile = true
@@ -38,6 +48,11 @@ metafile = true
 [[files]]
 file = "mods/controlify.pw.toml"
 hash = "d9cba6cac8489cdc81e42cec6e663cca1ee86e5314ff13feb90bacaaf386f31d"
+metafile = true
+
+[[files]]
+file = "mods/cristel-lib.pw.toml"
+hash = "26d1ab497ef70c80f9a429872faa0efcc308c36db4e8f42c78325a46b7f4c58c"
 metafile = true
 
 [[files]]
@@ -111,8 +126,18 @@ hash = "15e7405fb9ffa10e8b64234e41ab5031a0ea3c20625aeac25e23334c8f1307c0"
 metafile = true
 
 [[files]]
+file = "mods/netherportalfix.pw.toml"
+hash = "f4cb84e7f15f01f98b162e7607b03be8192cb2df50f6bff0bff80061bee05822"
+metafile = true
+
+[[files]]
 file = "mods/origins-legacy.pw.toml"
 hash = "3c0d446998aad3c398c79ded64ab3a4458678a6f379b4102145b7125951c4f39"
+metafile = true
+
+[[files]]
+file = "mods/peterwolfs-realistic-tree-felling.pw.toml"
+hash = "f70470efc6642178a27426c64c634972059dbbf0802b3f3918ea5c9c0c1316d2"
 metafile = true
 
 [[files]]
@@ -136,6 +161,11 @@ hash = "01a8553390795e7b20629a9ea8fade9d01a8738efa852f00d9c5f4ba7ebe7a74"
 metafile = true
 
 [[files]]
+file = "mods/simple-voice-chat.pw.toml"
+hash = "6865b44c30baa85a87c344ac9d3e0eb0135e90b26a90a6dc28bf79a363170cf9"
+metafile = true
+
+[[files]]
 file = "mods/sound-physics-remastered.pw.toml"
 hash = "9bab2f7038705a3a14c522ef378743465a596f2d1e28305c2c9a291cbb7d6289"
 metafile = true
@@ -156,6 +186,11 @@ hash = "11753ff4740122b98d7b0aae3eccda9a4ff289c23448c7abfd0c8dbc425b10c7"
 metafile = true
 
 [[files]]
+file = "mods/towns-and-towers.pw.toml"
+hash = "4e491951aa63bf70f11242b8165673e88fdb01e7b4510f4aa50d61d60dc3b266"
+metafile = true
+
+[[files]]
 file = "mods/visual-workbench.pw.toml"
 hash = "52f2715ca5d645d7f5e49850287cea06626c0c92a3464530f51d5d6d6e5f7f51"
 metafile = true
@@ -163,6 +198,11 @@ metafile = true
 [[files]]
 file = "mods/xaeros-minimap.pw.toml"
 hash = "14e96b12f10a1f2920cdcec89b4d16e452bec4689e117b38b4c0f759145aaf7f"
+metafile = true
+
+[[files]]
+file = "mods/xaeros-world-map.pw.toml"
+hash = "cbb9808546870ecb0a7befebb14df0a11383b1aeafd175a77a0fc4caee44c6f2"
 metafile = true
 
 [[files]]

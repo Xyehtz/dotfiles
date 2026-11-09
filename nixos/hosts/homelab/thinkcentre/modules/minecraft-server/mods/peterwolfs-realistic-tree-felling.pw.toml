@@ -1,0 +1,13 @@
+name = "Peterwolfs Realistic Tree Felling"
+filename = "peterwolfs-realistic-tree-felling-1.1.9.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/GevfEXnx/versions/C1TA8uWs/peterwolfs-realistic-tree-felling-1.1.9.jar"
+hash-format = "sha512"
+hash = "16e60e77c585cf967527f4e4b2317405a04db8f443109acc6eaa0794992f61a203e40aa7da8d8d8878715dcd39ff780fea4b6d008a115572e7884f82279421c4"
+
+[update]
+[update.modrinth]
+mod-id = "GevfEXnx"
+version = "C1TA8uWs"

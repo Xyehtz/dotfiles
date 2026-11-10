@@ -46,6 +46,11 @@ hash = "2b9727522c90a979eb9671ad7c5421443d91391b0697d1772146e6bfa19cb3c1"
 metafile = true
 
 [[files]]
+file = "mods/collective.pw.toml"
+hash = "236c57b7b7c1561fbf7d5b2a04816a4cc5c3c062819ceb8f183909d2e853b287"
+metafile = true
+
+[[files]]
 file = "mods/controlify.pw.toml"
 hash = "d9cba6cac8489cdc81e42cec6e663cca1ee86e5314ff13feb90bacaaf386f31d"
 metafile = true
@@ -136,13 +141,18 @@ hash = "3c0d446998aad3c398c79ded64ab3a4458678a6f379b4102145b7125951c4f39"
 metafile = true
 
 [[files]]
-file = "mods/peterwolfs-realistic-tree-felling.pw.toml"
-hash = "f70470efc6642178a27426c64c634972059dbbf0802b3f3918ea5c9c0c1316d2"
+file = "mods/player-animation-library.pw.toml"
+hash = "edcf67f591069ab1b95b375c673bce575b56869ae3ca3adccc6cfb7bf76e70ab"
 metafile = true
 
 [[files]]
-file = "mods/player-animation-library.pw.toml"
-hash = "edcf67f591069ab1b95b375c673bce575b56869ae3ca3adccc6cfb7bf76e70ab"
+file = "mods/pneumono_core.pw.toml"
+hash = "fcbc7d28c0dcb13027fd358fcc893240bcad677bef271e0a666d44d5ddbad032"
+metafile = true
+
+[[files]]
+file = "mods/pneumono_gravestones.pw.toml"
+hash = "53e28e82bbfaace3c3dcbc566e1b99d726d718f38f8731a9b19c0b3e2dac69f8"
 metafile = true
 
 [[files]]
@@ -188,6 +198,11 @@ metafile = true
 [[files]]
 file = "mods/towns-and-towers.pw.toml"
 hash = "4e491951aa63bf70f11242b8165673e88fdb01e7b4510f4aa50d61d60dc3b266"
+metafile = true
+
+[[files]]
+file = "mods/tree-harvester.pw.toml"
+hash = "a2696a2be0667bef87d66a13163d3f82f5a68e5a271a74d975cb0f7dee9a5d31"
 metafile = true
 
 [[files]]

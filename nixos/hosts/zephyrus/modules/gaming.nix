@@ -8,9 +8,6 @@
     steam
     heroic
 
-    # Mod Clients
-    deadlock-mod-manager
-
     # Emulators
     rpcs3
 

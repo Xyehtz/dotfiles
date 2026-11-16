@@ -12,8 +12,8 @@
     ../general/garbage-collection.nix
     ../general/ram-compression.nix
     ../general/sound.nix
+    ../general/services/tailscale.nix
     ./services/core-services.nix
-    ./services/tailscale.nix
     ./services/upower.nix
     ./services/ly.nix
     ./programs.nix

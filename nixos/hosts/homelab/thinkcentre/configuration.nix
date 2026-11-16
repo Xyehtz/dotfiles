@@ -18,6 +18,7 @@
     ../../general/bootloader.nix
     ../../general/garbage-collection.nix
     ../../general/ram-compression.nix
+    ../../general/services/tailscale.nix
     ./programs.nix
     ./modules/minecraft-server/server.nix
 

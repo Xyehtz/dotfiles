@@ -16,6 +16,7 @@
     ./services/core-services.nix
     ./services/upower.nix
     ./services/ly.nix
+    ./services/espanso-service.nix
     ./programs.nix
     ./fonts.nix
 

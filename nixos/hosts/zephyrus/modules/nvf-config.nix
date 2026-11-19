@@ -11,15 +11,24 @@
     settings.vim = {
       statusline.lualine.enable = true;
       telescope.enable = true;
-      filetree.neo-tree.enable = true;
       autopairs.nvim-autopairs.enable = true;
+
+      keymaps = [
+        {
+          key = "<leader>tw";
+          mode = "n";
+          action = ":Twilight<CR>";
+          desc = "Toggle Twilight";
+        }
+      ];
+
+      filetree.nvimTree = {
+        enable = true;
+        mappings.toggle = "<leader>g";
+      };
 
       utility = {
         yazi-nvim.enable = true;
-      };
-
-      ui = {
-        modes-nvim.enable = true;
       };
 
       treesitter = {
@@ -161,23 +170,33 @@
       };
       snippets.luasnip.enable = true;
 
+      # Visual plugins
       visuals = {
         fidget-nvim.enable = true;
-        twilight-nvim.enable = true;
         indent-blankline.enable = true;
+        rainbow-delimiters.enable = true;
+        satellite-nvim.enable = true;
+
+        # Icons
+        nvim-web-devicons.enable = true;
+        tiny-devicons-auto-colors.enable = true;
+
+        # Twilight configuration
+        twilight-nvim.enable = true;
+      };
+
+      ui = {
+        modes-nvim.enable = true;
+        illuminate.enable = true;
       };
 
       diagnostics = {
         enable = true;
 
         config = {
-          virtual_text = false;
-          virtual_lines = {
-            current_line = true;
-          };
+          virtual_text = true;
           signs = true;
-          underline = true;
-          update_in_insert = false;
+          update_in_insert = true;
         };
       };
 
@@ -190,31 +209,6 @@
           };
         };
       };
-
-      # Inline hints
-      luaConfigRC.inlay-hints = ''
-        vim.api.nvim_create_autocmd("LspAttach", {
-          callback = function(args)
-            local client = vim.lsp.get_client_by_id(args.data.client_id)
-            if client and client.server_capabilities.inlayHintProvider then
-              vim.lsp.inlay_hint.enable(true, { bufnr = args.buf })
-            end
-          end,
-        })
-      '';
-      autocmds = [
-        {
-          event = ["FileType"];
-          pattern = ["NvimTree" "neo-tree" "help" "qf"];
-          desc = "Disable ufo on special buffers";
-          callback = lib.generators.mkLuaInline ''
-            function()
-              require('ufo').detach()
-              vim.opt_local.foldenable = false
-            end
-          '';
-        }
-      ];
 
       # ==== Plugins Section ====
 
@@ -243,18 +237,6 @@
               cancel_deferred_save = { "InsertEnter" },
               },
             }'';
-        };
-
-        # Cursor animations
-        smear-cursor = {
-          package = pkgs.vimPlugins.smear-cursor-nvim;
-          setup = ''
-            require('smear_cursor').setup({
-              stiffness = 0.8,
-              trailing_stiffness = 0.5,
-              distance_stop_animating = 0.5,
-            })
-          '';
         };
 
         promise-async.package = pkgs.vimPlugins.promise-async;

@@ -4,7 +4,6 @@
   ...
 }: {
   programs = {
-    niri.enable = true;
     fish.enable = true;
     steam.enable = true;
 
@@ -70,6 +69,9 @@
     tigervnc
     swift
     sourcekit-lsp
+
+    # StuffOrg
+    datagrip
   ];
 
   # HACK: This is an issue with OnlyOffice, check in the future if this keeps happening
@@ -86,8 +88,7 @@
       "steam-run"
       "obsidian"
       "rpcs3"
-      "idea"
-      "intellij-idea"
       "termius"
+      "datagrip"
     ];
 }

@@ -1,4 +1,4 @@
-name = "Xyeht's Server"
+name = "Xyeht's Minecraft Server"
 author = "Xyehtz"
 version = "1.0.0"
 pack-format = "packwiz:1.1.0"
@@ -9,5 +9,5 @@ hash-format = "sha256"
 hash = "8a0a85cd9861126cc2eb90efed615c7fba2cf0c2d4d6e596d1e26ce34ff3820e"
 
 [versions]
-fabric = "0.20.1"
-minecraft = "26.3"
+minecraft = "1.21.1"
+neoforge = "21.1.267"

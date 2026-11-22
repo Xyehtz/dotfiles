@@ -37,3 +37,15 @@ font-feature = feat=1
 font-size = 11
 font-family = "FiraCode Nerd Font"
 freetype-load-flags = hinting,force-autohint
+
+# Cursor
+# Focused on custom cursor shaders to make the cursor look better on Ghostty
+# The cursors are obtained from https://github.com/sahaj-b/cursor-shaders
+# The Shaders are of extension .glsl, they are saved on the ./shaders folder
+# The two options used are
+#   custom-shader -> The path to the glsl file
+#   custom-shader-animation -> Enable and set when the custom animation to run
+#                              this can be True, False, or Always
+#
+custom-shader = ./shaders/cursor_wrap.glsl
+custom-shader-animation = always

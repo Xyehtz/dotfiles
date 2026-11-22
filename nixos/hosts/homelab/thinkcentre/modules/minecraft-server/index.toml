@@ -181,6 +181,11 @@ hash = "4de3e4a1a49e332c1ad313283e0403c4273b628d634c17a9ff0c9da3d6b67f9a"
 metafile = true
 
 [[files]]
+file = "mods/jei.pw.toml"
+hash = "4faeb52fbe2025e58510fefdf9e96f1186cddbce87d568501fa512ad403fd613"
+metafile = true
+
+[[files]]
 file = "mods/kotlin-for-forge.pw.toml"
 hash = "52be2f8af37fa9a10f817b3a676e56c9cdf33a3632048d8e922312878244b794"
 metafile = true
@@ -203,6 +208,11 @@ metafile = true
 [[files]]
 file = "mods/lithostitched.pw.toml"
 hash = "c0611d8448bc043f372a008a435e14aa238ba8fca52fd1d79634424576ea9e12"
+metafile = true
+
+[[files]]
+file = "mods/mezzconfig.pw.toml"
+hash = "5d445e2ad3f047becc67fec1e8f3bf6fe22ade3a443ec301590d54d0f3b91f3a"
 metafile = true
 
 [[files]]

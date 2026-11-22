@@ -18,6 +18,10 @@ in {
     servers.main = {
       enable = true;
       package = pkgs.neoforgeServers.neoforge-1_21_1.override {
+        # From what I've seen when doing the Minecraft servers
+        # it usually ends up better to specify the JRE version as
+        # an override because sometimes nix-minecraft may end up
+        # using the incorrect version of Java
         jre_headless = pkgs.jdk21_headless;
       };
 

@@ -1,0 +1,13 @@
+name = "Overgrown's Apoli"
+filename = "apoli-1.132.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/i2NQbLvK/versions/wANUeGzx/apoli-1.132.0.jar"
+hash-format = "sha512"
+hash = "703e16f0866ae3d91a8c2c351908ffc85f7cf37258d1da448f65cd478469be6dad43e784890d8d663bb9ac1700f15f9918b8e8bf73e438bf56f720a1743d0071"
+
+[update]
+[update.modrinth]
+mod-id = "i2NQbLvK"
+version = "wANUeGzx"

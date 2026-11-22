@@ -1,0 +1,13 @@
+name = "Additional Entity Attributes"
+filename = "additionalentityattributes-neoforge-2.0.2+1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/6oFu5eHi/versions/6oJLT6m7/additionalentityattributes-neoforge-2.0.2%2B1.21.1.jar"
+hash-format = "sha512"
+hash = "f92579794c46dbb62db1a9f60e79dc303c8930de16fabc494d2da21c8c782b0bfb1f791519bcc9f92002abc0dbe09cf470686b84753c91cbdfd47fe87ebd561e"
+
+[update]
+[update.modrinth]
+mod-id = "6oFu5eHi"
+version = "6oJLT6m7"

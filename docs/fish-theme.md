@@ -1,4 +1,8 @@
+> [!NOTE]
+> As of 11/21/2026 fish is not being used as Nushell is being tested.
+
 The theme I use is the damin theme which can be installed by doing.
+
 ```bash
 omf install damin # Installation
 omf theme damin # Setting theme
@@ -6,6 +10,7 @@ damin_set_palette rosepine # Set theme to Rose Pine
 ```
 
 For later updates to this do.
+
 ```
 omf update damin
 ```

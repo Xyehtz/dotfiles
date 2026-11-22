@@ -74,7 +74,9 @@
       "wheel"
       "video"
     ];
-    shell = pkgs.fish; # Fish is the default shell
+    # shell = pkgs.fish; # Fish is the default shell
+    # Currently testing nushell
+    shell = pkgs.nushell;
   };
 
   # MangoWM settings

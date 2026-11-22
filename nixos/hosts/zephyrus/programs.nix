@@ -4,7 +4,9 @@
   ...
 }: {
   programs = {
-    fish.enable = true;
+    # Currently testing Nushell
+    # fish.enable = true;
+    nushell.enable = true;
     steam.enable = true;
 
     # CoreCtrl used for GPU undervolting
